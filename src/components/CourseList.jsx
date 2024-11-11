@@ -1,25 +1,34 @@
-import React from 'react';
-
-const courses = [
-  { id: 1, title: 'React for Beginners', price: '$99' },
-  { id: 2, title: 'Advanced JavaScript', price: '$149' },
-];
+// components/CourseList.js
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCourses } from '../store/courseSlice';
+import "./CourseList.css"
 
 const CourseList = () => {
-  return (
-    <div>
-      <h2>Available Courses</h2>
-      <ul>
-        {courses.map((course) => (
-          <li key={course.id}>
-            <h3>{course.title}</h3>
-            <p>Price: {course.price}</p>
-            <button>Buy Now</button>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    const dispatch = useDispatch();
+    const courses = useSelector((state) => state.course.courses);
+    console.log("courses:", courses);
+    useEffect(() => {
+        // Dispatch fetchCourses with a payload (e.g., filter parameters)
+        const filterPayload = { category: 'frontend', level: 'beginner' };
+        if(courses.length == 0) {
+          dispatch(fetchCourses(filterPayload));
+        }
+    }, [dispatch]);
+
+    return (
+        <div>
+            <h1>Course List</h1>
+            <ul>
+                {courses.map((course) => (
+                    <li key={course.id}>
+                        {course.title} - {course.price}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 };
 
 export default CourseList;
+
