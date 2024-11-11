@@ -6,6 +6,8 @@ import Services from './pages/Services';
 import Whyus from './pages/Whyus';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
+import BlogDetail from './components/BlogDetails';
+import BlogList from './components/BlogList';
 // import Profile from './pages/Profile';
 // import Login from './pages/Login';
 // import ProtectedRoute from './components/ProtectedRoute';
@@ -23,7 +25,10 @@ const App = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/services" element={<Services />} />
         <Route path="/whyus" element={<Whyus />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog" element={<Blogs />}>
+            <Route index element={<BlogList />} />  {/* Default blog list */}
+            <Route path=":id" element={<BlogDetail />} /> {/* Blog details */}
+        </Route>
         <Route path="/contact" element={<Contact />} />
 
 
