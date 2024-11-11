@@ -11,21 +11,23 @@ const CourseList = () => {
     useEffect(() => {
         // Dispatch fetchCourses with a payload (e.g., filter parameters)
         const filterPayload = { category: 'frontend', level: 'beginner' };
-        if(courses.length == 0) {
-          dispatch(fetchCourses(filterPayload));
+        if (courses.length == 0) {
+            dispatch(fetchCourses(filterPayload));
         }
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>Course List</h1>
-            <ul>
+        <div className="course-list">
+            <div className="video-grid">
                 {courses.map((course) => (
-                    <li key={course.id}>
-                        {course.title} - {course.price}
-                    </li>
+                    <div key={course.id} className="video-card">
+                        <a href={course.link} target="_blank" rel="noopener noreferrer">
+                            <img src={course.thumbnail} alt={course.title} className="video-thumbnail" />
+                            <h2 className="video-title">{course.title}</h2>
+                        </a>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
