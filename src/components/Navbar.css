@@ -1,12 +1,15 @@
 /* Nav.css */
 nav {
-    background-color: yellow; /* Yellow background for nav */
+    background-color: yellow; /* Yellow background */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw; /* Full width of the viewport */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0; /* Sticks the navbar to the top */
+    z-index: 1000; /* Ensures navbar is above other content */
 }
 
 nav ul {
@@ -23,21 +26,66 @@ nav ul li {
     display: inline;
 }
 
-nav a {
+.nav-menu li a {
     text-decoration: none;
     font-weight: bold;
+    color: black;
 }
 
-nav a:hover {
+.nav-menu li a:hover {
     color: darkgray;
 }
 
-/* Responsive Nav */
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
-    nav ul {
+    .nav-header {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Hide default horizontal menu and prepare sliding menu */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: yellow;
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: auto; /* Reset width to auto for stacking */
+        align-items: flex-start;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    /* Slide in from the left when open */
+    .nav-menu.open {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+     /* Adjust padding and width for nav items */
+     .nav-menu li {
+        padding: 15px 20px; /* Horizontal padding for better spacing */
+    }
+
+    /* Ensure links are not stretched to full width */
+    .nav-menu li a {
+        font-size: 1.2em;
+        color: black;
+        width: auto; /* Only take up as much space as content */
     }
 }
