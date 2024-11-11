@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import userReducer from './userSlice'; // Example slice
+import couseReducer from './courseSlice'
 import rootSaga from '../Saga/index'; // Import rootSaga
 
 // Create the saga middleware
@@ -10,6 +11,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
   reducer: {
     user: userReducer, // Add other reducers if needed
+    course: couseReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware), // Disable thunk and use saga
 });
