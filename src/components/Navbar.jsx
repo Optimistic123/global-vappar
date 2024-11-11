@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><Link to="/courses">Courses</Link></li>
         <li><Link to="/services">Our service</Link></li>
         <li><Link to="/whyus">Why us</Link></li>
-        <li><Link to="/blogs">Blogs</Link></li>
+        <li><Link to="/blog">Blogs</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
       </ul>
     </nav>
