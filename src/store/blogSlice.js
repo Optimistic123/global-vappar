@@ -2,7 +2,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     blogs: [],
-    blog: {}
+    blog: {},
+    isBlogLoading: true
 };
 
 const blogSlice = createSlice({
@@ -11,6 +12,7 @@ const blogSlice = createSlice({
     reducers: {
         setBlogs: (state, action) => {
             state.blogs = action.payload;
+            state.isBlogLoading = false
         },
         setBlog: (state, action) => {
             state.blog = action.payload;

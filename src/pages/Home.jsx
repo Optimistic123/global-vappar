@@ -1,11 +1,10 @@
 import React from 'react';
+import HomeScreen from '../components/HomeScreen';
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Welcome to the Course Website</h1>
-      <p>Browse and purchase courses, then access your purchased content in the profile section.</p>
-    </div>
+  return (<div>
+    <HomeScreen />
+  </div>
   );
 };
 

@@ -1,7 +1,8 @@
 // features/courseSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
-    courses: []
+    courses: [],
+    isLoading: true
 };
 
 const courseSlice = createSlice({
@@ -10,6 +11,8 @@ const courseSlice = createSlice({
     reducers: {
         setCourses: (state, action) => {
             state.courses = action.payload;
+            debugger
+            state.isLoading = false;
         },
         fetchCourses: (state, action) => {
             // This can be used to trigger the saga with a payload

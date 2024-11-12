@@ -36,7 +36,6 @@ const fetchCoursesApi = (payload) => {
 // Saga to handle fetching courses with a payload
 function* fetchCoursesSaga(action) {
   try {
-    debugger
     const courses = yield call(fetchCoursesApi, action.payload); // Pass payload to API
     yield put(setCourses(courses)); // Dispatch to store fetched courses
   } catch (error) {

@@ -14,16 +14,18 @@ const Navbar = () => {
     <nav>
       <div className="nav-header">
         <Link to="/">
-          <img src="global-vappar/src/assets/react.svg" alt="Logo" className="logo" />
+          <img src="src/assets/channels4_profile.jpg" alt="Logo" className="logo" />
         </Link>
         <button className="hamburger" onClick={toggleMenu}>
           ☰
         </button>
       </div>
       <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-        {isMenuOpen ? <button className="cross-icon" onClick={toggleMenu}>
-          ✖️
-        </button> : null}
+        {isMenuOpen && (
+          <button className="cross-icon" onClick={toggleMenu}>
+            ✖️
+          </button>
+        )}
         <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
         <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Our Service</Link></li>
         <li><Link to="/whyus" onClick={() => setIsMenuOpen(false)}>Why Us</Link></li>
