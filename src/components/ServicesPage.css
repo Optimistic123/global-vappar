@@ -1,0 +1,108 @@
+/* ServicesPage.css */
+.services-page {
+    padding: 20px;
+}
+
+.intro-lead-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.intro-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+}
+
+.intro-section ul li {
+    padding: 2px;
+    margin-bottom: 5px;
+}
+
+.lead-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.intro-section,
+.cta,
+.services-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 30%;
+    min-width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    background-color: #45a049;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .intro-lead-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 80%;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+
+    .intro-section h2,
+    .intro-section p,
+    .service-card {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .service-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .cta button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
