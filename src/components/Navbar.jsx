@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav>
       <div className="nav-header">
         <Link to="/">
-          <img src="src/assets/channels4_profile.jpg" alt="Logo" className="logo" />
+          <img src="src/assets/logo.png" alt="Logo" className="logo" />
         </Link>
         <button className="hamburger" onClick={toggleMenu}>
           ☰
