@@ -24,7 +24,7 @@ const BlogList = () => {
                 <Shimmer type={"blogShimmer"}/>
             ) : (
                 <div className="blog-grid">
-                    {blogs.map((blog) => (
+                    {blogs.length > 0 && blogs?.map((blog) => (
                         <div key={blog.id} className="blog-card">
                             <h3>{blog.title}</h3>
                             <p>{blog.summary}</p>
