@@ -1,9 +1,9 @@
 // features/courseSaga.js
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { setBlogs, fetchBlogs, fetchBlog } from '../store/blogSlice';
+import { setBlogs, fetchBlogs, setBlogDetails, fetchBlogDetails } from '../store/blogSlice';
 
 // Mock API call with payload - replace with actual API endpoint
-const fetchBlogsApi = (payload) => {
+const fetchBlogsApi = (action) => {
     // const response = await fetch('https://api.example.com/courses', {
     //     method: 'GET', // or 'GET', depending on your API
     //     headers: {
@@ -15,30 +15,46 @@ const fetchBlogsApi = (payload) => {
     // if (!response.ok) throw new Error('Failed to fetch courses');
     // const data = await response.json();
     // return data;
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const newList = [
-          { id: 1, title: 'Blog 1', content: 'Blog 1 descp' },
-          { id: 2, title: 'Blog 2', content: 'Blog 2 descp' },
-        ]
-        resolve(newList)
-      }, 1000);
-    });
+    debugger
+    const { id } = action.payload
+    if (id) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const blogDetails = {
+                    id: 1,
+                    title: 'Blog 1',
+                    content: "<h1>Blog Title</h1><p>This is a blog paragraph.</p><ul><li>Item 1</li><li>Item 2</li></ul>"
+                }
+                resolve(blogDetails)
+            }, 1000);
+        });
+    } else {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const newList = [
+                    { id: 1, title: 'Blog 1', content: 'Blog 1 descp' },
+                    { id: 2, title: 'Blog 2', content: 'Blog 2 descp' },
+                ]
+                resolve(newList)
+            }, 1000);
+        });
+    }
 };
 
 function* fetchBlogsSaga(action) {
     try {
-        const blogs = yield call(fetchBlogsApi, action.payload); // Pass payload to API
+        const blogs = yield call(fetchBlogsApi, action); // Pass payload to API
         yield put(setBlogs(blogs)); // Dispatch to store fetched courses
     } catch (error) {
         console.error('Failed to fetch courses:', error);
     }
 }
 
-function* fetchBlogSaga(action) {
+function* fetchBlogDetail(action) {
     try {
-        const blogs = yield call(fetchBlogsApi, action.payload); // Pass payload to API
-        yield put(setBlogs(blogs)); // Dispatch to store fetched courses
+        const blogDetails = yield call(fetchBlogsApi, action); // Pass payload to API
+        debugger
+        yield put(setBlogDetails(blogDetails)); // Dispatch to store fetched courses
     } catch (error) {
         console.error('Failed to fetch courses:', error);
     }
@@ -47,7 +63,7 @@ function* fetchBlogSaga(action) {
 // Watcher saga
 export function* watchCourseSaga() {
     yield takeLatest(fetchBlogs.type, fetchBlogsSaga);
-    yield takeLatest(fetchBlog.type, fetchBlogSaga);
+    yield takeLatest(fetchBlogDetails.type, fetchBlogDetail);
 }
 
 export default watchCourseSaga;

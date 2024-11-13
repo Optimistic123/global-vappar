@@ -1,23 +1,30 @@
-// BlogDetail.js
-
-// BlogDetail.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchBlogDetails } from '../store/blogSlice';
+import Shimmer from './Shimmer';
+import './BlogDetail.css'
 
 const BlogDetail = () => {
     const { id } = useParams();
-    const blogs = useSelector((state) => state.blog.blogs);
-    const blog = blogs.find((b) => b.id === parseInt(id));
+    const dispatch = useDispatch();
+    const blogDetail = useSelector((state) => state.blog.blogDetail);
+    const isBlogDetailLoading = useSelector((state) => state.blog.isBlogDetailLoading);
 
-    if (!blog) {
-        return <p>Blog not found.</p>;
-    }
+    useEffect(() => {
+        dispatch(fetchBlogDetails({id}));
+    }, [dispatch]);
 
     return (
         <div>
-            <h2>{blog.title}</h2>
-            <p>{blog.content}</p>
+            {isBlogDetailLoading ? (
+                <Shimmer type={"blogDetailsShimmer"} />
+            ) : (
+                <div className="blog-content">
+                    <h2>{blogDetail.title}</h2>
+                    <div dangerouslySetInnerHTML={{ __html: blogDetail.content }}></div>
+                </div>
+            )}
         </div>
     );
 };

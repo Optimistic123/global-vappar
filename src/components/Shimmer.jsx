@@ -24,6 +24,19 @@ const Shimmer = ({ type }) => {
                     ))}
                 </div>
                 )
+            case "blogDetailsShimmer":
+                return (<div className="blog-details-shimmer">
+                    <div className="blog-details-shimmer-title"></div>
+                    <div className="blog-details-shimmer-meta"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="blog-details-shimmer-image"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="blog-details-shimmer-paragraph"></div>
+                </div>
+                )
             default:
                 return null;
         }

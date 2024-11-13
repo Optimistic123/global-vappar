@@ -2,8 +2,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     blogs: [],
-    blog: {},
-    isBlogLoading: true
+    blogDetail: {},
+    isBlogLoading: true,
+    isBlogDetailLoading: true
 };
 
 const blogSlice = createSlice({
@@ -12,19 +13,20 @@ const blogSlice = createSlice({
     reducers: {
         setBlogs: (state, action) => {
             state.blogs = action.payload;
-            state.isBlogLoading = false
+            state.isBlogLoading = false;
         },
-        setBlog: (state, action) => {
-            state.blog = action.payload;
+        setBlogDetails: (state, action) => {
+            state.blogDetail = action.payload;
+            state.isBlogDetailLoading = false;
         },
         fetchBlogs: (state, action) => {
             // This can be used to trigger the saga with a payload
         },
-        fetchBlog: (state, action) => {
+        fetchBlogDetails: (state, action) => {
             // This can be used to trigger the saga with a payload
         }
     },
 });
 
-export const { setBlogs, fetchBlogs, fetchBlog } = blogSlice.actions;
+export const { setBlogs, fetchBlogs, setBlogDetails, fetchBlogDetails } = blogSlice.actions;
 export default blogSlice.reducer;
