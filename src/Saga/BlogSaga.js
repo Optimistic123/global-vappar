@@ -32,8 +32,8 @@ const fetchBlogsApi = (action) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const newList = [
-                    { id: 1, title: 'Blog 1', content: 'Blog 1 descp' },
-                    { id: 2, title: 'Blog 2', content: 'Blog 2 descp' },
+                    { id: 1, title: 'Blog 1', summary: 'Blog 1 Summary' },
+                    { id: 2, title: 'Blog 2', summary: 'Blog 2 Summary' },
                 ]
                 resolve(newList)
             }, 1000);
