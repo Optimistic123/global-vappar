@@ -1,9 +1,9 @@
 import React from 'react'
-import ContactForm from '../components/ContactForm'
+import ContactUs from '../components/ContactUs'
 
 const Contact = () => {
   return (<div>
-      <ContactForm />
+      <ContactUs />
     </div>
   )
 }
