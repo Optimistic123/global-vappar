@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px;
-    gap: 20px;
+    gap: 10px;
 }
 
 .text-content {
@@ -53,12 +53,17 @@
 .image-content {
     flex: 1;
     max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
 }
 
 .image-content img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
 /* Responsive Design */

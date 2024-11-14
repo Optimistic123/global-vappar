@@ -20,18 +20,18 @@ const Navbar = () => {
           ☰
         </button>
       </div>
-      <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-        {isMenuOpen && (
-          <button className="cross-icon" onClick={toggleMenu}>
-            ✖️
-          </button>
-        )}
-        <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
-        <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Our Service</Link></li>
-        <li><Link to="/whyus" onClick={() => setIsMenuOpen(false)}>Why Us</Link></li>
-        <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blogs</Link></li>
-        <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
-      </ul>
+      
+      {/* Separate nav-menu as a div instead of ul */}
+      <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+        <button className="cross-icon" onClick={toggleMenu}>✖️</button>
+        <ul>
+          <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
+          <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Our Service</Link></li>
+          <li><Link to="/whyus" onClick={() => setIsMenuOpen(false)}>Why Us</Link></li>
+          <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blogs</Link></li>
+          <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
+        </ul>
+      </div>
     </nav>
   );
 };
