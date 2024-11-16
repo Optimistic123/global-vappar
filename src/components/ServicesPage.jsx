@@ -14,16 +14,19 @@ const ServicesPage = () => {
     <div className="services-page">
       <section className="intro-lead-container">
         <div className="intro-section">
-            <h2>We Accelerate your export import business with our experience</h2>
-            <p>A small brief of how GV accelerates the growth with its services</p>
-            <ul>
-              <li>Highkights 1</li>
-              <li>Highkights 1</li>
-              <li>Highkights 1</li>
-              <li>Highkights 1</li>
-              <li>Highkights 1</li>
-              <li>Highkights 1</li>
-            </ul>
+            <section className='description'>
+              <h2 className='header'>We Accelerate your export import business with our experience</h2>
+              <p className='content'>A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services</p>
+            </section>
+            <section className='highlights'>
+              <h2>Key highlights</h2>
+              <ul>
+                <li>Highkights 1</li>
+                <li>Highkights 1</li>
+                <li>Highkights 1</li>
+                <li>Highkights 1</li>
+              </ul>
+            </section>
         </div>
         <div ref={contactFormRef} className="lead-form">
           <ContactForm />
