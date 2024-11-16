@@ -1,0 +1,188 @@
+/* Shimmer.scss */
+
+.shimmer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    .shimmer-card {
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+
+        .shimmer-thumbnail {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .shimmer-title {
+            width: 80%;
+            height: 16px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin: 8px auto;
+        }
+
+        .shimmer-thumbnail,
+        .shimmer-title {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                animation: shimmer 1.5s infinite;
+            }
+        }
+    }
+}
+
+/* BlogShimmer */
+
+.blog-shimmer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+
+    .blog-shimmer-card {
+        height: 250px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+
+        .blog-shimmer-title {
+            width: 60%;
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .blog-shimmer-summary {
+            width: 100%;
+            height: 15px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .blog-shimmer-button {
+            width: 40%;
+            height: 15px;
+            background: #e0e0e0;
+            border-radius: 4px;
+        }
+
+        .blog-shimmer-title,
+        .blog-shimmer-summary,
+        .blog-shimmer-button {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+                animation: shimmer 1.5s infinite;
+            }
+        }
+    }
+}
+
+/* BlogDetailsShimmer */
+
+.blog-details-shimmer {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .title,
+    .meta,
+    .paragraph,
+    .image {
+        background: #e0e0e0;
+        border-radius: 5px;
+        animation: shimmer 1.5s infinite linear;
+    }
+
+    .title {
+        width: 70%;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .meta {
+        width: 40%;
+        height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .paragraph {
+        width: 100%;
+        height: 15px;
+        margin-bottom: 10px;
+    }
+
+    .image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    div {
+        background: linear-gradient(
+            to right,
+            #f0f0f0 0%,
+            #e0e0e0 20%,
+            #f0f0f0 40%,
+            #f0f0f0 100%
+        );
+        background-size: 200% 100%;
+    }
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .blog-shimmer-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .blog-shimmer-card {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .blog-shimmer-title {
+        width: 70%;
+        height: 18px;
+    }
+
+    .blog-shimmer-summary {
+        height: 14px;
+    }
+
+    .blog-shimmer-button {
+        width: 50%;
+        height: 14px;
+    }
+}

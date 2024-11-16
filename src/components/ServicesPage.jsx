@@ -1,7 +1,7 @@
 // ServicesPage.js
 import React from 'react';
 import ContactForm from './ContactForm'; // Lead Form component
-import './ServicesPage.css';
+import './ServicesPage.scss';
 
 const ServicesPage = () => {
   return (

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchBlogDetails } from '../store/blogSlice';
 import Shimmer from './Shimmer';
-import './BlogDetail.css'
+import './BlogDetail.scss'
 
 const BlogDetail = () => {
     const { id } = useParams();
@@ -16,7 +16,7 @@ const BlogDetail = () => {
     }, [dispatch]);
 
     return (
-        <div>
+        <div className='blog-details'>
             {isBlogDetailLoading ? (
                 <Shimmer type={"blogDetailsShimmer"} />
             ) : (

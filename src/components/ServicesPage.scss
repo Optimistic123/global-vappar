@@ -1,4 +1,3 @@
-/* ServicesPage.css */
 .services-page {
     padding: 20px;
 }
@@ -10,23 +9,21 @@
 }
 
 .intro-section {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     aspect-ratio: 1 / 1;
     padding: 10px;
-}
+    width: 100%;
 
-.intro-section ul li {
-    padding: 2px;
-    margin-bottom: 5px;
+    ul li {
+        padding: 2px;
+        margin-bottom: 5px;
+    }
 }
 
 .lead-form {
-    flex: 1;
-    display: flex;
     justify-content: center;
     margin: 20px 0;
     width: 100%;
@@ -62,10 +59,10 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
-}
 
-.cta button:hover {
-    background-color: #45a049;
+    &:hover {
+        background-color: #45a049;
+    }
 }
 
 /* Media Query for Tablets */
@@ -88,7 +85,6 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-
     .intro-section h2,
     .intro-section p,
     .service-card {
