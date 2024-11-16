@@ -15,7 +15,6 @@ const fetchBlogsApi = (action) => {
     // if (!response.ok) throw new Error('Failed to fetch courses');
     // const data = await response.json();
     // return data;
-    debugger
     const { id } = action.payload
     if (id) {
         return new Promise((resolve, reject) => {
@@ -53,7 +52,6 @@ function* fetchBlogsSaga(action) {
 function* fetchBlogDetail(action) {
     try {
         const blogDetails = yield call(fetchBlogsApi, action); // Pass payload to API
-        debugger
         yield put(setBlogDetails(blogDetails)); // Dispatch to store fetched courses
     } catch (error) {
         console.error('Failed to fetch courses:', error);

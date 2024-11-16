@@ -11,7 +11,6 @@ const courseSlice = createSlice({
     reducers: {
         setCourses: (state, action) => {
             state.courses = action.payload;
-            debugger
             state.isLoading = false;
         },
         fetchCourses: (state, action) => {
