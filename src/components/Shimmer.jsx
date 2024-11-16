@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Shimmer.css";
+import "./Shimmer.scss";
 
 const Shimmer = ({ type }) => {
     const getShimmerClassDesign = () => {
@@ -26,15 +26,15 @@ const Shimmer = ({ type }) => {
                 )
             case "blogDetailsShimmer":
                 return (<div className="blog-details-shimmer">
-                    <div className="blog-details-shimmer-title"></div>
-                    <div className="blog-details-shimmer-meta"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
-                    <div className="blog-details-shimmer-image"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
-                    <div className="blog-details-shimmer-paragraph"></div>
+                    <div className="title"></div>
+                    <div className="meta"></div>
+                    <div className="paragraph"></div>
+                    <div className="paragraph"></div>
+                    <div className="paragraph"></div>
+                    <div className="image"></div>
+                    <div className="paragraph"></div>
+                    <div className="paragraph"></div>
+                    <div className="paragraph"></div>
                 </div>
                 )
             default:

@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCourses } from '../store/courseSlice';
-import "./CourseList.css"
+import "./CourseList.scss"
 import Shimmer from './Shimmer';
 
 const CourseList = () => {

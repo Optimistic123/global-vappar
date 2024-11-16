@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogs } from '../store/blogSlice';
-import "./BlogList.css"
+import "./BlogList.scss"
 import Shimmer from './Shimmer';
 
 const BlogList = () => {
