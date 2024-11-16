@@ -13,6 +13,11 @@ const Navbar = () => {
     dispatch(setMenu(!isMenuOpen));
   };
 
+  const collpaseMenu = () => {
+    dispatch(setMenu(false));
+  };
+
+
   return (
     <div className='nav-container'>
       <nav>
@@ -32,11 +37,11 @@ const Navbar = () => {
           </div>
           <div className='page-link'>
             <ul>
-              <li><Link to="/courses" onClick={toggleMenu}>Courses</Link></li>
-              <li><Link to="/services" onClick={toggleMenu}>Our Service</Link></li>
-              <li><Link to="/whyus" onClick={toggleMenu}>Why Us</Link></li>
-              <li><Link to="/blog" onClick={toggleMenu}>Blogs</Link></li>
-              <li><Link to="/contact" onClick={toggleMenu}>Contact Us</Link></li>
+              <li><Link to="/courses" onClick={collpaseMenu}>Courses</Link></li>
+              <li><Link to="/services" onClick={collpaseMenu}>Our Service</Link></li>
+              <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li>
+              <li><Link to="/blog" onClick={collpaseMenu}>Blogs</Link></li>
+              <li><Link to="/contact" onClick={collpaseMenu}>Contact Us</Link></li>
             </ul>
           </div>
         </div>

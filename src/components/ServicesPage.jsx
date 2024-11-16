@@ -1,9 +1,15 @@
 // ServicesPage.js
-import React from 'react';
+import React, { useRef } from 'react';
 import ContactForm from './ContactForm'; // Lead Form component
 import './ServicesPage.scss';
 
 const ServicesPage = () => {
+  const contactFormRef = useRef(null);
+
+  const scrollToElement = () => {
+    contactFormRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <div className="services-page">
       <section className="intro-lead-container">
@@ -19,7 +25,7 @@ const ServicesPage = () => {
               <li>Highkights 1</li>
             </ul>
         </div>
-        <div className="lead-form">
+        <div ref={contactFormRef} className="lead-form">
           <ContactForm />
         </div>
       </section>
@@ -34,7 +40,7 @@ const ServicesPage = () => {
       </section>
 
       <div className="cta">
-        <button onClick={() => window.scrollTo(0, document.body.scrollHeight)}>Get a Quote</button>
+        <button onClick={scrollToElement}>Get a Quote</button>
       </div>
     </div>
   );
