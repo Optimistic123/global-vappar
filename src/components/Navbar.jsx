@@ -23,7 +23,7 @@ const Navbar = () => {
       <nav>
         <div className="nav-header">
           <Link to="/">
-            <img src="public/logo.png" alt="Logo" className="logo" />
+            <img src="public/assets/logo.png" alt="Logo" className="logo" />
           </Link>
           <button className="hamburger" onClick={toggleMenu}>
             ☰

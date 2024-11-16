@@ -14,7 +14,7 @@ const HomeScreen = () => {
         </p>
       </div>
       <div className="image-content">
-        <img src="public/import-export.webp" alt="Illustration" />
+        <img src="public/assets/import-export.webp" alt="Illustration" />
       </div>
     </div>
   );
