@@ -13,7 +13,7 @@ const userSlice = createSlice({
     reducers: {
         // Action to trigger login saga
         login: (state, action) => {
-            debugger
+            
             state.user = action.payload;
             state.isAuthenticated = true;
         },
@@ -25,7 +25,6 @@ const userSlice = createSlice({
         },
         // Action for failed login
         loginFailure: (state, action) => {
-            debugger
             state.error = action.payload;
             state.isAuthenticated = false;
         },

@@ -1,13 +1,16 @@
 // Navbar.js
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMenu } from '../store/aapSlice';
 import './Navbar.scss';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const dispatch = useDispatch();
+  const isMenuOpen = useSelector((state) => state.app.isMenuOpen);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    dispatch(setMenu(!isMenuOpen));
   };
 
   return (
@@ -29,11 +32,11 @@ const Navbar = () => {
           </div>
           <div className='page-link'>
             <ul>
-              <li><Link to="/courses" onClick={() => setIsMenuOpen(false)}>Courses</Link></li>
-              <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Our Service</Link></li>
-              <li><Link to="/whyus" onClick={() => setIsMenuOpen(false)}>Why Us</Link></li>
-              <li><Link to="/blog" onClick={() => setIsMenuOpen(false)}>Blogs</Link></li>
-              <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
+              <li><Link to="/courses" onClick={toggleMenu}>Courses</Link></li>
+              <li><Link to="/services" onClick={toggleMenu}>Our Service</Link></li>
+              <li><Link to="/whyus" onClick={toggleMenu}>Why Us</Link></li>
+              <li><Link to="/blog" onClick={toggleMenu}>Blogs</Link></li>
+              <li><Link to="/contact" onClick={toggleMenu}>Contact Us</Link></li>
             </ul>
           </div>
         </div>
