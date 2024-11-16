@@ -22,6 +22,10 @@
 
     .contact-form-container {
         width: 100%;
+
+        .contact-form{
+            width: 80%;
+        }
     }
 }
 
@@ -42,6 +46,12 @@
 
             p {
                 font-size: 1.2em;
+            }
+        }
+
+        .contact-form-container {
+            .contact-form{
+                width: 100%;
             }
         }
     }
