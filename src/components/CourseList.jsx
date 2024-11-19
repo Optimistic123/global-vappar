@@ -21,16 +21,22 @@ const CourseList = () => {
     return (
         <div className="course-list">
             {isLoading ? (
-                <Shimmer type={"courseShimmer"}/>
+                <Shimmer type={"courseShimmer"} />
             ) : (
                 <div className="video-grid">
                     {courses.map((course) => (
-                        <div key={course.id} className="video-card">
-                            <a href={course.link} target="_blank" rel="noopener noreferrer">
-                                <img src={course.thumbnail} alt={course.title} className="video-thumbnail" />
-                                <h2 className="video-title">{course.title}</h2>
-                            </a>
+                        <div className='video-card'>
+                            <div key={course.id} className="video-image">
+                                <a href={course.link} target="_blank" rel="noopener noreferrer">
+                                    <img src={course.thumbnail} alt={course.title} className="video-thumbnail" />
+                                </a>
+                            </div>
+                            <div key={course.id} className="video-descp">
+                               <label>{course.title}</label>
+                               <p>{course.descp}</p>
+                            </div>
                         </div>
+
                     ))}
                 </div>
             )}

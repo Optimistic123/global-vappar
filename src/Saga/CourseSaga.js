@@ -18,16 +18,22 @@ const fetchCoursesApi = (payload) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const newList = [
-        { id: '1', title: 'Video Title 1', thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=ywI0xPabPr4' },
-        { id: '2', title: 'Video Title 2', thumbnail: 'https://img.youtube.com/vi/73fvG0b37xY/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=73fvG0b37xY' },
-        { id: '3', title: 'Video Title 3', thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw' },
-        { id: '4', title: 'Video Title 4', thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=ywI0xPabPr4' },
-        { id: '5', title: 'Video Title 5', thumbnail: 'https://img.youtube.com/vi/73fvG0b37xY/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=73fvG0b37xY' },
-        { id: '6', title: 'Video Title 6', thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw' },
-        { id: '7', title: 'Video Title 7', thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw' },
-        { id: '8', title: 'Video Title 8', thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw' },
-        { id: '9', title: 'Video Title 9', thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw' },
-      ]
+        { id: '1', title: 'Video Title 1', 
+          thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg', 
+          link: 'https://www.youtube.com/watch?v=ywI0xPabPr4',
+          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+        },
+        { id: '2', title: 'Video Title 2', 
+          thumbnail: 'https://img.youtube.com/vi/73fvG0b37xY/hqdefault.jpg', 
+          link: 'https://www.youtube.com/watch?v=73fvG0b37xY',
+          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+        },
+        { id: '3', title: 'Video Title 3', 
+          thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', 
+          link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw',
+          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+        },
+        ]
       resolve(newList)
     }, 1000);
   });
