@@ -39,6 +39,9 @@ const HomeScreen = () => {
           </h1>
           <p>
             Learn about <strong>Import, Export Consulting</strong> and develop business.
+            Unlock the secrets of global trade with Global Vyapar. Join our expert-led <strong>webinars</strong> and comprehensive courses to master the art of import-export business. 
+            Whether you're starting out or scaling up, we provide the knowledge, tools, and community support you need to thrive in the international marketplace. 
+            Learn, network, and grow your business with us!
           </p>
         </div>
         <div className="image-content">
