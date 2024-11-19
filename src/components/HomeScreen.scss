@@ -1,87 +1,173 @@
 /* HomeScreen.css */
 .home-screen {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 10px;
+    .org-description {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2rem;
+        gap: 1rem;
 
-    .text-content {
-        flex: 1;
-        max-width: 500px;
-        text-align: left;
+        .text-content {
+            flex: 1;
+            max-width: 500px;
+            text-align: left;
 
-        h1 {
-            font-size: 48px;
-            line-height: 1.2;
-            margin: 10px 0;
+            h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+                margin: 0.5rem 0;
+                color: #333;
+            }
+
+            h4 {
+                font-size: 1rem;
+                color: #666;
+            }
+
+            .highlight {
+                color: #0066cc;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #777;
+                margin: 1rem 0;
+            }
         }
 
-        h4 {
-            font-size: 18px;
+        .image-content {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1/1;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .org-highlights {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        width: 100%;
+        background-color: #f9f9f9;
+
+        label {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    
+        .exim-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+
+            button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    background-color: #0056b3;
+                    transform: scale(1.05);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .org-youtube-higlight {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 200px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .org-clinets {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem;
+
+        label {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
             color: #555;
         }
 
-        .highlight {
-            color: #0066cc;
-            /* Customize to desired color */
-        }
-
-        p {
-            font-size: 18px;
-            color: #666;
-            margin: 15px 0;
-        }
-    }
-
-    .view-courses-btn {
-        background-color: #e0d1ff;
-        color: #333;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .view-courses-btn {
-        &:hover {
-            background-color: #d0c1ff;
-        }
-    }
-
-    .image-content {
-        flex: 1;
-        max-width: 500px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        aspect-ratio: 1/1;
-    }
-
-    .image-content {
-        img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
+        /* Slider Placeholder */
+        .slider-placeholder {
+            margin-top: 1rem;
+            height: 200px;
+            background-color: #eaeaea;
             border-radius: 10px;
         }
     }
-}
 
-@media (max-width: 768px) {
-    .home-screen {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        h1 {
-            font-size: 36px;
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .org-description {
+            flex-direction: column;
+            text-align: center;
         }
-
-        p {
-            font-size: 16px;
+    
+        .org-highlights {
+            .content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
         }
     }
 }
