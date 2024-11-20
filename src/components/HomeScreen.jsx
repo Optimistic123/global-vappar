@@ -6,11 +6,11 @@ import ContactForm from "./ContactForm"
 import { useNavigate } from "react-router-dom";
 
 const logos = [
-  { src: "/assets/logo1.png", alt: "Client 1" },
-  { src: "/assets/logo2.png", alt: "Client 2" },
-  { src: "/assets/logo3.png", alt: "Client 3" },
-  { src: "/assets/logo4.png", alt: "Client 4" },
-  { src: "/assets/logo5.png", alt: "Client 5" },
+  { src: "/assets/logo.png", alt: "Client 1" },
+  { src: "/assets/logo.png", alt: "Client 2" },
+  { src: "/assets/logo.png", alt: "Client 3" },
+  { src: "/assets/logo.png", alt: "Client 4" },
+  { src: "/assets/logo.png", alt: "Client 5" },
 ];
 
 const HomeScreen = () => {
@@ -58,8 +58,8 @@ const HomeScreen = () => {
             <button onClick={handldeExploreCourse}>Explore courses</button>
           </div>
           <div className='org-youtube-higlight'>
-            <a href={"https://www.youtube.com/@GlobalVyapar"} target="_blank" rel="noopener noreferrer">
-              <img src={"/assets/logo.png"} alt={"org-youtube-link"} />
+            <a href={"https://www.youtube.com/watch?v=73fvG0b37xY"} target="_blank" rel="noopener noreferrer">
+              <img src={"https://img.youtube.com/vi/73fvG0b37xY/hqdefault.jpg"} alt={"org-youtube-link"} />
             </a>
           </div>
         </div>
