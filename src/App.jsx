@@ -11,6 +11,7 @@ import BlogList from './components/BlogList';
 // import Profile from './pages/Profile';
 // import Login from './pages/Login';
 // import ProtectedRoute from './components/ProtectedRoute';
+import Layout from './components/Layout';
 import { useSelector } from 'react-redux';
 
 import "./App.css"
@@ -23,26 +24,28 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className={`page-container ${isMenuOpen ? 'blur' : ''}`}>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/whyus" element={<Whyus />} />
-          <Route path="/blog" element={<Blogs />}>
-            <Route index element={<BlogList />} />  {/* Default blog list */}
-            <Route path=":id" element={<BlogDetail />} /> {/* Blog details */}
-          </Route>
-          <Route path="/contact" element={<Contact />} />
+      <Layout>
+        <div className={`page-container ${isMenuOpen ? 'blur' : ''}`}>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/whyus" element={<Whyus />} />
+            <Route path="/blog" element={<Blogs />}>
+              <Route index element={<BlogList />} />  {/* Default blog list */}
+              <Route path=":id" element={<BlogDetail />} /> {/* Blog details */}
+            </Route>
+            <Route path="/contact" element={<Contact />} />
 
 
-          {/* <Route path="/login" element={<Login />} /> */}
-          {/* Protected Route */}
-          {/* <Route element={<ProtectedRoute component={Home} isAuth={true}/>}>
+            {/* <Route path="/login" element={<Login />} /> */}
+            {/* Protected Route */}
+            {/* <Route element={<ProtectedRoute component={Home} isAuth={true}/>}>
           <Route path="/profile" element={<Profile />} />
         </Route> */}
-        </Routes>
-      </div>
+          </Routes>
+        </div>
+      </Layout>
 
     </Router>
   );
