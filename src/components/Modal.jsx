@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactModal from 'react-modal';
 
 const Modal = (props) => {
   const { modalIsOpen, children, handleClose } = props;
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => { 
+        document.body.style.overflow = "initial";
+    };
+},[]);
   return (
     <div className='modal-container'>
       <ReactModal

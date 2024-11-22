@@ -39,7 +39,7 @@ const Navbar = () => {
             <ul>
               <li><Link to="/courses" onClick={collpaseMenu}>Courses</Link></li>
               <li><Link to="/services" onClick={collpaseMenu}>Our Service</Link></li>
-              <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li>
+              {/* <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li> */}
               <li><Link to="/blog" onClick={collpaseMenu}>Blogs</Link></li>
               <li><Link to="/contact" onClick={collpaseMenu}>Contact Us</Link></li>
             </ul>
