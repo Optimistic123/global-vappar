@@ -1,6 +1,7 @@
 // Layout.js
 import React from 'react';
 import Footer from './Footer'; // Import the Footer component
+import "./Layout.scss"
 
 const Layout = ({ children, customFooter }) => {
   return (

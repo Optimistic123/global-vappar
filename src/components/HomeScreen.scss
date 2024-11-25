@@ -35,7 +35,7 @@
 
         .text-content {
             position: relative;
-            z-index: 1; // Places text above the video and overlay
+            // z-index: 1; // Places text above the video and overlay
             text-align: center;
             max-width: 700px;
             margin-bottom: 2rem;
@@ -109,6 +109,7 @@
                     overflow: hidden;
                     width: 100%;
                     padding-top: 56.25%; // Maintain a 16:9 aspect ratio
+                    border-radius: 10px;
 
                     .highlight-video {
                         position: absolute;
@@ -233,11 +234,10 @@
         text-align: center;
         gap: 1.5rem;
         padding: 2rem;
-        height: 35vh;
 
-        label {
-            font-size: 1.25rem;
-            font-weight: bold;
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
             color: #333;
         }
 
@@ -246,6 +246,95 @@
             color: #555;
         }
     }
+
+    .testimonial-section {
+        padding: 4rem 2rem;
+        background-color: #f9f9f9;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            max-width: 350px;
+            width: 100%;
+            min-height: 500px; // Ensures a taller card
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+
+            .video-wrapper {
+                width: 100%;
+                height: 80%; // Video takes 80% of the card height
+                overflow: hidden;
+                border-radius: 8px 8px 0 0; // Rounded corners for the top
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+
+                .testimonial-video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; // Ensures the video covers the area
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.05); // Zoom effect on hover
+                    }
+                }
+            }
+
+            .content {
+                width: 100%;
+                height: 20%; // Content takes 20% of the card height
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .testimonial-text {
+                    font-size: 1rem;
+                    color: #555;
+                    margin-bottom: 0.5rem;
+                    text-align: center;
+                }
+
+                .client-info {
+                    text-align: center;
+
+                    .client-name {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        color: #007bff;
+                    }
+
+                    .client-title {
+                        font-size: 0.9rem;
+                        color: #777;
+                    }
+                }
+            }
+        }
+    }
+
+
+
 
     /* Responsive Styling */
     @media (max-width: 768px) {

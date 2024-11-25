@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './HomeScreen.scss';
 import CircularLogoSlider from "./CircularLogoSlider";
 import Modal from "./Modal"
@@ -17,6 +17,16 @@ const HomeScreen = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
+  useEffect(() => {
+    const timeouId = setTimeout(() => {
+      setShowModal(true)
+    }, 2000)
+
+    return () => {
+      clearTimeout(timeouId);
+    }
+  }, [])
+
   const handldeWebinarSingUp = () => {
     setShowModal(true);
   }
@@ -25,9 +35,26 @@ const HomeScreen = () => {
     setShowModal(false);
   }
 
-  const handldeExploreCourse = () => {
-    navigate("/courses");
-  };
+  // const handldeExploreCourse = () => {
+  //   navigate("/courses");
+  // };
+
+  const testimonials = [
+    {
+      id: 1,
+      videoSrc: '/assets/import-ex.mp4', // Replace with your video URL
+      text: 'Global Vyapar helped us expand our business globally. The resources and guidance were outstanding!',
+      clientName: 'John Doe',
+      clientTitle: 'CEO, TradeConnect',
+    },
+    {
+      id: 2,
+      videoSrc: '/assets/import-ex.mp4', // Replace with your video URL
+      text: 'With their support, starting our export business was so much easier. Highly recommended!',
+      clientName: 'Jane Smith',
+      clientTitle: 'Founder, ExportEase',
+    },
+  ];
 
   return (
     <div className="home-screen">
@@ -58,7 +85,7 @@ const HomeScreen = () => {
             <label>Knowledge to fule teh growth of your exim buinsess - GV - A community of 2lkh+ on YouTube</label>
             <div className='action-button'>
               <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button>
-              <button onClick={handldeExploreCourse}>Explore courses</button>
+              {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}
             </div>
           </div>
           <div className="org-youtube-highlight">
@@ -71,13 +98,13 @@ const HomeScreen = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
-              <div className="youtube-overlay">
+              {/* <div className="youtube-overlay">
                 <img
                   className="youtube-icon"
                   src="/assets/youtube-icon.png" // Replace with your YouTube icon path
                   alt="YouTube Icon"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -85,8 +112,32 @@ const HomeScreen = () => {
       </section>
 
       <section className='org-clinets'>
-        <label>Our partners and client</label>
+        <h2>Our partners and client</h2>
         <CircularLogoSlider logos={logos} />
+      </section>
+
+      <section className="testimonial-section">
+        <h2>What Our Clients Say</h2>
+        <div className="testimonials-container">
+          {testimonials.map(({ id, videoSrc, text, clientName, clientTitle }) => (
+            <div key={id} className="testimonial-card">
+              <div className="video-wrapper">
+                <video
+                  src={videoSrc}
+                  controls
+                  muted
+                  className="testimonial-video"
+                  preload="metadata"
+                ></video>
+              </div>
+              <p className="testimonial-text">"{text}"</p>
+              <div className="client-info">
+                <h4 className="client-name">{clientName}</h4>
+                <p className="client-title">{clientTitle}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {showModal && <Modal
