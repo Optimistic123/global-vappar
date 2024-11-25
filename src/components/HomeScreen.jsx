@@ -121,6 +121,13 @@ const HomeScreen = () => {
         <div className="testimonials-container">
           {testimonials.map(({ id, videoSrc, text, clientName, clientTitle }) => (
             <div key={id} className="testimonial-card">
+              <div className="content-wrapper">
+                <p className="testimonial-text">{text}</p>
+                <div className="client-info">
+                  <h4 className="client-name">{clientName}</h4>
+                  <p className="client-title">{clientTitle}</p>
+                </div>
+              </div>
               <div className="video-wrapper">
                 <video
                   src={videoSrc}
@@ -129,11 +136,6 @@ const HomeScreen = () => {
                   className="testimonial-video"
                   preload="metadata"
                 ></video>
-              </div>
-              <p className="testimonial-text">"{text}"</p>
-              <div className="client-info">
-                <h4 className="client-name">{clientName}</h4>
-                <p className="client-title">{clientTitle}</p>
               </div>
             </div>
           ))}
