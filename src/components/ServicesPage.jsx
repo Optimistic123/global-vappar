@@ -34,6 +34,60 @@ const ServicesPage = () => {
         </div>
       </section>
 
+      <section className="testimonials-section">
+        <h2>What Our Clients Say</h2>
+        <div className="testimonials">
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "Global Vyapar has transformed the way I handle my import-export business. Their courses and support are top-notch!"
+            </p>
+            <div className="client-info">
+              <img
+                src="/assets/client1.jpg"
+                alt="Client 1"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">John Doe</h4>
+                <p className="client-title">CEO, TradeConnect</p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "The webinars and resources provided by Global Vyapar are invaluable. Highly recommended for aspiring entrepreneurs!"
+            </p>
+            <div className="client-info">
+              <img
+                src="/assets/client2.jpg"
+                alt="Client 2"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">Jane Smith</h4>
+                <p className="client-title">Founder, ExportEase</p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-card">
+            <p className="testimonial-text">
+              "Global Vyapar's startup kit made launching my export business so much easier. Thank you!"
+            </p>
+            <div className="client-info">
+              <img
+                src="/assets/client3.jpg"
+                alt="Client 3"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">Rajesh Kumar</h4>
+                <p className="client-title">Entrepreneur</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="services-section">
         <h2>Our Services</h2>
         <div className="service-cards">
