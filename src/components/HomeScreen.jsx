@@ -4,6 +4,7 @@ import CircularLogoSlider from "./CircularLogoSlider";
 import Modal from "./Modal"
 import ContactForm from "./ContactForm"
 import { useNavigate } from "react-router-dom";
+import Typewriter from './TypeWriter';
 
 const logos = [
   { src: "/assets/logo.png", alt: "Client 1" },
@@ -72,8 +73,9 @@ const HomeScreen = () => {
         <div className="text-content">
 
           <div className='text-tile'>
+            <Typewriter text={"Grow Your Export-Import Business with Global Vyapar"} />
             <h4>
-              <span className="highlight">Grow Your Export-Import Business with Global Vyapar</span>
+              {/* <span className="highlight">Grow Your Export-Import Business with Global Vyapar</span> */}
             </h4>
             <h4>
               Take your business global with <span className="highlight">Global Vyapar</span>, your one-stop solution for learning, consulting, and executing export-import strategies.
