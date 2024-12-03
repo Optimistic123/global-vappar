@@ -35,9 +35,9 @@ const HomeScreen = () => {
     setShowModal(false);
   }
 
-  // const handldeExploreCourse = () => {
-  //   navigate("/courses");
-  // };
+  const handldeExploreCourse = () => {
+    navigate("/courses");
+  };
 
   const testimonials = [
     {
@@ -70,22 +70,39 @@ const HomeScreen = () => {
           Your browser does not support the video tag.
         </video>
         <div className="text-content">
-          <h4>Your <span className="highlight">Import Export</span> business starts here</h4>
-          <h1>
-            We help domestic business go global with our streamlined import export services
-          </h1>
+
+          <div className='text-tile'>
+            <h4>
+              <span className="highlight">Grow Your Export-Import Business with Global Vyapar</span>
+            </h4>
+            <h4>
+              Take your business global with <span className="highlight">Global Vyapar</span>, your one-stop solution for learning, consulting, and executing export-import strategies.
+            </h4>
+          </div>
+
+          <div className='text-main-point'>
+            <ul>
+              <li><h4>A trusted partner for export-import businesses.</h4></li>
+              <li><h4>Expert-led learning programs tailored for entrepreneurs.</h4></li>
+              <li><h4>A thriving community of over 2 lakh+ followers on YouTube.</h4></li>
+              <li><h4>Regular webinars and hands-on learning experiences.</h4></li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
 
       <section className='org-highlights'>
-        <label>Knowledge to fule teh growth of your exim buinsess - GV - A community of 2lkh+ on YouTube</label>
+        <label>Knowledge to Fuel Your EXIM Business Growth</label>
         <div className='content'>
           <div className='exim-description'>
-            <label>Knowledge to fule teh growth of your exim buinsess - GV - A community of 2lkh+ on YouTube</label>
-            <div className='action-button'>
-              <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button>
-              {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}
+            <div className='exim-text'>
+              <label>Global Vyapar empowers businesses with the right tools, strategies, and community to thrive in international trade. Join our growing network of successful exporters and importers.</label>
+              <div className='action-button'>
+                {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
+                <button onClick={handldeExploreCourse}>Explore courses</button>
+              </div>
             </div>
           </div>
           <div className="org-youtube-highlight">
@@ -142,12 +159,12 @@ const HomeScreen = () => {
         </div>
       </section>
 
-      {showModal && <Modal
+      {/* {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>}
+      </Modal>} */}
     </div>
   );
 };

@@ -11,7 +11,19 @@
         flex-direction: column;
         padding: 26px 0px 0px 10px;
         width: 100%;
-        gap: 37px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .description {
+            justify-content: center;
+            align-items: center;
+            margin-left: -200px;
+            // .header {
+            //     margin-left: -180px;
+            //     margin-bottom: 10px;
+            // }
+        }
 
         ul li {
             padding: 2px;
@@ -21,7 +33,11 @@
 
     .lead-form {
         justify-content: center;
-        width: 80%;
+        width: 100%;
+
+        .contact-form-container {
+            width: 80%;
+        }
     }
 
     .services-section {
@@ -201,6 +217,14 @@
 
     @media (max-width: 480px) {
 
+        .intro-section {
+            .description {
+                justify-content: center;
+                align-items: center;
+                margin-left: -245px;
+            }
+        }
+
         .intro-section h2,
         .intro-section p,
         .service-card {
@@ -221,6 +245,9 @@
 
         .lead-form {
             width: 100%;
+            .contact-form-container {
+                width: 100%;
+            }
         }
     }
 }

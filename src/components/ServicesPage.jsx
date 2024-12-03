@@ -29,18 +29,12 @@ const ServicesPage = () => {
         "Streamline your shipping process with our reliable freight forwarding solutions.",
       videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
     },
-    {
-      title: "Customs Clearance",
-      description:
-        "Hassle-free customs clearance services to ensure smooth international trade operations.",
-      videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
-    },
-    {
-      title: "Sourcing",
-      description:
-        "Find the right products and suppliers with our trusted sourcing services.",
-      videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
-    },
+    // {
+    //   title: "Customs Clearance",
+    //   description:
+    //     "Hassle-free customs clearance services to ensure smooth international trade operations.",
+    //   videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
+    // }
   ];
 
   return (
@@ -48,17 +42,16 @@ const ServicesPage = () => {
       <section className="intro-lead-container">
         <div className="intro-section">
           <section className='description'>
-            <h2 className='header'>We Accelerate your export import business with our experience</h2>
-            <p className='content'>A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services</p>
+            <h2 className='header'>At Global Vyapar, we offer:</h2>
+            {/* <p className='content'>A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services</p> */}
           </section>
           <section className='highlights'>
-            <h2>Key highlights</h2>
+            {/* <h2>Key highlights</h2> */}
             <ul>
-              <li>Export-Import business courses</li>
-              <li>Export-Import start-up kit (Documents)</li>
-              <li>Freight Forwarding</li>
-              <li>Customs Clearance</li>
-              <li>Sourcing</li>
+              <li><strong>Export-Import Training: </strong>Learn the A-Z of international trade</li>
+              <li><strong>Business Consulting: </strong>Tailored strategies to scale your global operations</li>
+              <li><strong>Market Insights: </strong>Stay ahead with the latest trends and analytics.</li>
+              <li><strong>Compliance Support: </strong>Navigate regulations with ease.</li>
             </ul>
           </section>
         </div>
