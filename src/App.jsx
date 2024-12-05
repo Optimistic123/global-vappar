@@ -46,7 +46,6 @@ const App = () => {
           </Routes>
         </div>
       </Layout>
-
     </Router>
   );
 };

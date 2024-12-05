@@ -1,0 +1,36 @@
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 50px; /* Gives the pill-shaped appearance */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 300px; /* Adjust as per your design */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cta-text {
+    color: #000033; /* Dark text for contrast */
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #000033; /* Dark blue */
+    color: white; /* White arrow */
+    font-size: 18px;
+    border-radius: 50%; /* Makes it circular */
+  }
+  

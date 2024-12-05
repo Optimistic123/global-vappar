@@ -19,29 +19,32 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.6;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); // Semi-transparent dark overlay
-            z-index: 0; // Layer between the video and the text
+            // opacity: 0.6;
         }
 
         .text-content {
             position: relative;
-            // z-index: 1; // Places text above the video and overlay
-            
-            max-width: 700px;
-            margin-bottom: 20%;
-            .text-tile {
-                text-align: center;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-bottom: 30vh;
+            margin-left: 40px;
 
+            .text-tile {
+                text-align: left;
+
+                .t-header {
+                    display: inline-block;
+                    /* Ensures the width matches the content */
+                    background-color: darkblue;
+                    padding: 0.5rem 1rem;
+                    /* Add some padding for spacing */
+                    color: white;
+                    /* Contrast text for readability */
+                    border-radius: 20px;
+                    /* Rounded corners */
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                }
             }
 
             h4 {
@@ -75,187 +78,217 @@
 
             .text-main-point {
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                align-items: left;
             }
 
             ul {
-                color: #fff;
-                li > h4 {
+                color: darkblue;
+                margin-left: 14px;
+
+                li>h4 {
                     font-size: 1rem;
-                    color: skyblue;
+                    color: darkblue;
                     margin-bottom: 0.5rem;
                     font-weight: 500;
-                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+                    // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
                 }
             }
         }
     }
+
 
     .org-highlights {
         display: flex;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
         gap: 1.5rem;
         padding: 2rem;
         width: 100%;
-        min-height: 60vh;
-        // background-color: #f9f9f9;
+        min-height: 92vh;
+        background-color: #09057e;
 
-        label {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .content {
+        .org-highlights-card {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
+            min-height: 70vh;
+            width: 93%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to bottom right, #09057e, #5850ce);
 
-            // .exim-description,
-            // .org-youtube-higlight {
-            //     width: 50%;
-            // }
-
-
-            .exim-description {
+            .header {
+                flex: 0 1 20%;
                 display: flex;
-                flex-direction: column;
+                justify-content: center;
                 align-items: center;
-                width: 50%; // Ensures the section takes the full height of the viewport
-    
-                .exim-text {
-                    width: 70%;
-                    .action-button {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        margin-top: 35px;
-    
-                        button {
-                            padding: 0.8rem 1.5rem;
-                            font-size: 1rem;
-                            background-color: #007bff;
-                            color: #fff;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
-                            transition: background-color 0.3s ease, transform 0.3s ease;
-        
-                            &:hover {
-                                background-color: #0056b3;
-                                transform: scale(1.05);
+                font-size: 1.5rem;
+                padding: 10px;
+
+                label {
+                    font-size: 1.25rem;
+                    font-weight: bold;
+                    color: white;
+                }
+            }
+
+            .content {
+                // flex: 1 0 80%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                flex-direction: row;
+
+                .exim-description {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    justify-content: center;
+                    align-items: center;
+
+                    .exim-text {
+                        width: 70%;
+
+                        .action-button {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 35px;
+
+                            button {
+                                padding: 0.8rem 1.5rem;
+                                font-size: 1rem;
+                                background-color: #007bff;
+                                color: #fff;
+                                border: none;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                transition: background-color 0.3s ease, transform 0.3s ease;
+
+                                &:hover {
+                                    background-color: #0056b3;
+                                    transform: scale(1.05);
+                                }
                             }
                         }
                     }
                 }
-    
-            }
 
-            .org-youtube-highlight {
-                position: relative;
-                width: 50%;
-                max-width: 600px; // Adjust as needed
-                margin: 0 auto;
-
-                .video-wrapper {
+                .org-youtube-highlight {
                     position: relative;
-                    overflow: hidden;
-                    width: 100%;
-                    padding-top: 56.25%; // Maintain a 16:9 aspect ratio
-                    border-radius: 10px;
+                    width: 50%;
+                    max-width: 600px;
+                    margin: 0 auto;
 
-                    .highlight-video {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
+                    .video-wrapper {
+                        position: relative;
+                        overflow: hidden;
                         width: 100%;
-                        height: 100%;
-                        pointer-events: none; // Prevents interactions on the video directly
-                        transition: opacity 0.3s ease-in-out;
-                    }
+                        padding-top: 56.25%;
+                        border-radius: 10px;
 
-                    .youtube-overlay {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        z-index: 1;
-                        pointer-events: none; // Icon is decorative, so it doesn't interfere
-
-                        .youtube-icon {
-                            width: 80px; // Adjust size as needed
-                            opacity: 0.9;
-                        }
-                    }
-
-                    &:hover {
                         .highlight-video {
-                            pointer-events: auto; // Enable video controls on hover
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            pointer-events: none;
+                            transition: opacity 0.3s ease-in-out;
                         }
 
                         .youtube-overlay {
-                            display: none; // Hide the overlay icon
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: 1;
+                            pointer-events: none;
+
+                            .youtube-icon {
+                                width: 80px;
+                                opacity: 0.9;
+                            }
+                        }
+
+                        &:hover {
+                            .highlight-video {
+                                pointer-events: auto;
+                            }
+
+                            .youtube-overlay {
+                                display: none;
+                            }
                         }
                     }
                 }
             }
         }
 
-        
+        @media (min-width: 768px) {
+            padding: 1.5rem;
+            /* Reduce padding on smaller screens */
 
-        // .org-youtube-highlight {
-        //     position: relative;
-        //     width: 50%;
-        //     max-width: 600px; // Adjust as needed
-        //     margin: 0 auto;
+            .org-highlights-card {
+                width: 80%;
+                min-height: 60vh;
+                /* Further adjust for smaller screens */
+            }
 
-        //     .video-wrapper {
-        //       position: relative;
-        //       overflow: hidden;
-        //       width: 100%;
-        //       padding-top: 56.25%; // Maintain a 16:9 aspect ratio
+            .header {
+                font-size: 1.2rem;
+            }
 
-        //       .highlight-video {
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //         pointer-events: none; // Prevents interactions on the video directly
-        //         transition: opacity 0.3s ease-in-out;
-        //       }
+            .content {
+                flex: 1 0 80%;
+                flex-direction: column;
+                gap: 1.5rem;
+                // flex-direction: row;
+            }
 
-        //       .youtube-overlay {
-        //         position: absolute;
-        //         top: 50%;
-        //         left: 50%;
-        //         transform: translate(-50%, -50%);
-        //         z-index: 1;
-        //         pointer-events: none; // Icon is decorative, so it doesn't interfere
+            .exim-description {
+                width: 100%;
+                align-items: flex-start;
+                /* Align items to the start */
+            }
 
-        //         .youtube-icon {
-        //           width: 80px; // Adjust size as needed
-        //           opacity: 0.9;
-        //         }
-        //       }
+            .org-youtube-highlight {
+                width: 100%;
+                margin: 0 auto;
+            }
 
-        //       &:hover {
-        //         .highlight-video {
-        //           pointer-events: auto; // Enable video controls on hover
-        //         }
+            .youtube-overlay .youtube-icon {
+                width: 60px;
+            }
+        }
 
-        //         .youtube-overlay {
-        //           display: none; // Hide the overlay icon
-        //         }
-        //       }
-        //     }
-        //   }
+        @media (max-width: 480px) {
+            padding: 1rem;
 
+            .header {
+                font-size: 1rem;
+            }
+
+            .org-highlights-card{
+                height: 70vh;
+                .content {
+                    justify-content: center;
+                    flex-direction: column;
+                    .exim-description {
+                        width: 100%;
+                    }
+                }
+            }  
+
+            .org-youtube-highlight {
+                width: 100%;
+            }
+        }
     }
+
 
     .org-clinets {
         display: flex;
@@ -263,6 +296,7 @@
         text-align: center;
         gap: 1.5rem;
         padding: 2rem;
+        min-height: 92vh;
 
         h2 {
             font-size: 2rem;
@@ -277,9 +311,10 @@
     }
 
     .testimonial-section {
-        padding: 4rem 2rem;
+        padding: 2rem;
         background-color: #f9f9f9;
         text-align: center;
+        min-height: 92vh;
 
         h2 {
             font-size: 2rem;
@@ -367,41 +402,26 @@
 
     /* Responsive Styling */
     @media (max-width: 768px) {
-        .org-description {
-            flex-direction: column;
-            /* Ensure a column layout */
-            justify-content: center;
-            /* Center content vertically */
-
+        .org-description { 
             .text-content {
-                margin-bottom: 0;
-
-                /* Remove bottom margin */
-                h1 {
-                    font-size: 2rem;
-                }
-
-                h4 {
-                    font-size: 1.2rem;
-                }
-
-                p {
-                    font-size: 1rem;
-                }
+                width: 100%;
+                margin-left: 1px;
+                margin-bottom: 22vh;
             }
         }
-
         .org-highlights {
             .content {
                 flex-direction: column;
 
                 .exim-description {
                     width: 100%;
+
                     .exim-text {
                         width: 100%;
 
                     }
                 }
+
                 .org-youtube-highlight {
                     width: 100%;
                 }

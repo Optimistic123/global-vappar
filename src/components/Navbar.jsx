@@ -23,7 +23,8 @@ const Navbar = () => {
       <nav>
         <div className="nav-header">
           <Link to="/">
-            <img src="/assets/logo.png" alt="Logo" className="logo" />
+            {/* <img src="/assets/logo.png" alt="Logo" className="logo" /> */}
+            <label className="logo">Global Vvypar</label>
           </Link>
           <button className="hamburger" onClick={toggleMenu}>
             ☰
@@ -33,7 +34,7 @@ const Navbar = () => {
         <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           <div className='smaller-screen-nav-header'>
             <label>Global Vvypar</label>
-            <button onClick={toggleMenu}>✖️</button>
+            <button className="cross-button" onClick={toggleMenu}>✖️</button>
           </div>
           <div className='page-link'>
             <ul>

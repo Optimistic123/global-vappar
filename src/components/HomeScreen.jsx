@@ -5,6 +5,7 @@ import Modal from "./Modal"
 import ContactForm from "./ContactForm"
 import { useNavigate } from "react-router-dom";
 import Typewriter from './TypeWriter';
+import CTAButton from './CTAButton';
 
 const logos = [
   { src: "/assets/logo.png", alt: "Client 1" },
@@ -67,21 +68,16 @@ const HomeScreen = () => {
           muted
           playsInline
         >
-          <source src="/assets/import-ex.mp4" type="video/mp4" />
+          <source src="/assets/theme-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="text-content">
-
           <div className='text-tile'>
-            <Typewriter text={"Grow Your Export-Import Business with Global Vyapar"} />
-            <h4>
-              {/* <span className="highlight">Grow Your Export-Import Business with Global Vyapar</span> */}
-            </h4>
-            <h4>
-              Take your business global with <span className="highlight">Global Vyapar</span>, your one-stop solution for learning, consulting, and executing export-import strategies.
-            </h4>
+            {/* <Typewriter text={"Grow Your Export-Import Business with Global Vyapar"} /> */}
+            <h4 className='t-header'>Go Global with Global Vyapar!</h4>
+            <h4><span className="highlight"> Grow Your Export-Import Business with Global Vyapar.</span></h4>
+            <h4>See why businesses across India trust Global Vyapar to solve their most complex export-import challenges.</h4>
           </div>
-
           <div className='text-main-point'>
             <ul>
               <li><h4>A trusted partner for export-import businesses.</h4></li>
@@ -90,43 +86,48 @@ const HomeScreen = () => {
               <li><h4>Regular webinars and hands-on learning experiences.</h4></li>
             </ul>
           </div>
-
+          <CTAButton CTA={"CTA"} />
         </div>
       </section>
 
 
       <section className='org-highlights'>
-        <label>Knowledge to Fuel Your EXIM Business Growth</label>
-        <div className='content'>
-          <div className='exim-description'>
-            <div className='exim-text'>
-              <label>Global Vyapar empowers businesses with the right tools, strategies, and community to thrive in international trade. Join our growing network of successful exporters and importers.</label>
-              <div className='action-button'>
-                {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
-                <button onClick={handldeExploreCourse}>Explore courses</button>
+        <div className='org-highlights-card'>
+          <div className='header'>
+            <label>Knowledge to Fuel Your EXIM Business Growth</label>
+          </div>
+          <div className='content'>
+            <div className='exim-description'>
+              <div className='exim-text'>
+                <label>Global Vyapar empowers businesses with the right tools, strategies, and community to thrive in international trade. Join our growing network of successful exporters and importers.</label>
+                <div className='action-button'>
+                  {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
+                  {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}
+                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse}/>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="org-youtube-highlight">
-            <div className="video-wrapper">
-              <iframe
-                className="highlight-video"
-                src="https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              {/* <div className="youtube-overlay">
+            <div className="org-youtube-highlight">
+              <div className="video-wrapper">
+                <iframe
+                  className="highlight-video"
+                  src="https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                {/* <div className="youtube-overlay">
                 <img
                   className="youtube-icon"
                   src="/assets/youtube-icon.png" // Replace with your YouTube icon path
                   alt="YouTube Icon"
                 />
               </div> */}
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 

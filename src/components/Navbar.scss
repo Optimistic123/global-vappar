@@ -1,8 +1,10 @@
 .nav-container {
-
-  /* General Styles */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   nav {
-    background-color: skyblue;
+    background-color: darkblue;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -12,13 +14,13 @@
 
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 20px;
+    height: 8vh
   }
 
   .nav-header {
     .logo {
-      height: 40px;
-      border-radius: 5px;
+      color: white;
     }
 
     .hamburger {
@@ -27,6 +29,7 @@
       background: none;
       border: none;
       cursor: pointer;
+      color: white;
     }
   }
 
@@ -49,11 +52,7 @@
         a {
           text-decoration: none;
           font-weight: bold;
-          color: black;
-
-          &:hover {
-            color: darkgray;
-          }
+          color: white;
         }
       }
     }
@@ -68,6 +67,7 @@
       justify-content: space-between;
       padding: 10px;
       width: 100%;
+      color: white;
 
       .logo {
         max-width: 100%;
@@ -96,10 +96,32 @@
       padding-top: 60px;
       transform: translateX(-100%);
       z-index: 1001;
-      background-color: yellow;
+      background-color: darkblue;
 
       &.open {
         transform: translateX(0);
+
+        .smaller-screen-nav-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          width: 100%;
+          color: white;
+    
+          label {
+            font-size: 1.2em;
+            font-weight: bold;
+          }
+    
+          .cross-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+          }
+        }
       }
 
       ul {
@@ -110,26 +132,6 @@
         li {
           padding: 15px 20px;
         }
-      }
-    }
-
-    .smaller-screen-nav-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      width: 100%;
-
-      label {
-        font-size: 1.2em;
-        font-weight: bold;
-      }
-
-      button {
-        background: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
       }
     }
   }
