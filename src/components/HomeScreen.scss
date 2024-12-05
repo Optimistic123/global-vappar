@@ -1,6 +1,7 @@
 /* HomeScreen.css */
 .home-screen {
-    background-color: #f9f9f9;
+    background-color: #09057e;
+
 
     .org-description {
         display: flex;
@@ -107,7 +108,7 @@
         padding: 2rem;
         width: 100%;
         min-height: 92vh;
-        background-color: #09057e;
+        // background-color: #09057e;
 
         .org-highlights-card {
             display: flex;
@@ -301,25 +302,24 @@
         h2 {
             font-size: 2rem;
             margin-bottom: 2rem;
-            color: #333;
+            color: white;
         }
 
         p {
             font-size: 1rem;
-            color: #555;
+            color: white;
         }
     }
 
     .testimonial-section {
         padding: 2rem;
-        background-color: #f9f9f9;
         text-align: center;
         min-height: 92vh;
 
         h2 {
             font-size: 2rem;
             margin-bottom: 2rem;
-            color: #333;
+            color: white;
         }
 
         .testimonials-container {
