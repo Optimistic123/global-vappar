@@ -1,0 +1,41 @@
+.star-rating {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    // padding: 10px 20px;
+    border-radius: 8px;
+    height: 80px;
+  }
+  
+  .star {
+    font-size: 2rem; /* Size of stars */
+    margin-right: 5px;
+    position: relative;
+  }
+  
+  .star.full {
+    color: #ffc107; /* Gold color for full stars */
+  }
+  
+  .star.half {
+    color: #ffc107; /* Gold for the filled half */
+  }
+  
+  .star.half::before {
+    content: "★";
+    position: absolute;
+    color: #ffc107;
+    width: 50%; /* Half-star width */
+    overflow: hidden;
+    left: 0;
+    top: 0;
+  }
+  
+  .star.empty {
+    color: #ddd; /* Grey color for empty stars */
+  }
+  
+  .star:last-child {
+    margin-right: 0; /* No margin for the last star */
+  }
+  

@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './HomeScreen.scss';
 import CircularLogoSlider from "./CircularLogoSlider";
-import Modal from "./Modal"
-import ContactForm from "./ContactForm"
 import { useNavigate } from "react-router-dom";
-import Typewriter from './TypeWriter';
 import CTAButton from './CTAButton';
+import StarRating from "./StarRating";
 
 const logos = [
   { src: "/assets/logo.png", alt: "Client 1" },
@@ -90,7 +88,6 @@ const HomeScreen = () => {
         </div>
       </section>
 
-
       <section className='org-highlights'>
         <div className='org-highlights-card'>
           <div className='header'>
@@ -103,7 +100,7 @@ const HomeScreen = () => {
                 <div className='action-button'>
                   {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
                   {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}
-                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse}/>
+                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} />
                 </div>
               </div>
             </div>
@@ -127,6 +124,66 @@ const HomeScreen = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials-section">
+        <h2>What Our Clients Say</h2>
+        <div className="testimonials">
+          <div className="testimonial-card">
+            <h4>Awesome tool! </h4>
+            <p className="testimonial-text">
+              "Global Vyapar has transformed the way I handle my import-export business. Their courses and support are top-notch!"
+            </p>
+            <StarRating rating={4.5} totalStars={5} />
+            <div className="client-info">
+              <img
+                src="/assets/client1.jpg"
+                alt="Client 1"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">John Doe</h4>
+                <p className="client-title">CEO, TradeConnect</p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-card">
+            <h4>Awesome tool! </h4>
+            <p className="testimonial-text">
+              "The webinars and resources provided by Global Vyapar are invaluable. Highly recommended for aspiring entrepreneurs!"
+            </p>
+            <StarRating rating={4.5} totalStars={5} />
+            <div className="client-info">
+              <img
+                src="/assets/client2.jpg"
+                alt="Client 2"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">Jane Smith</h4>
+                <p className="client-title">Founder, ExportEase</p>
+              </div>
+            </div>
+          </div>
+          <div className="testimonial-card">
+            <h4>Awesome tool! </h4>
+            <p className="testimonial-text">
+              "Global Vyapar's startup kit made launching my export business so much easier. Thank you!"
+            </p>
+            <StarRating rating={4.5} totalStars={5} />
+            <div className="client-info">
+              <img
+                src="/assets/client3.jpg"
+                alt="Client 3"
+                className="client-photo"
+              />
+              <div>
+                <h4 className="client-name">Rajesh Kumar</h4>
+                <p className="client-title">Entrepreneur</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

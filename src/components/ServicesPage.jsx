@@ -60,7 +60,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <section className="testimonials-section">
+      {/* <section className="testimonials-section">
         <h2>What Our Clients Say</h2>
         <div className="testimonials">
           <div className="testimonial-card">
@@ -112,7 +112,7 @@ const ServicesPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="services-section">
         <h2>Our Services</h2>

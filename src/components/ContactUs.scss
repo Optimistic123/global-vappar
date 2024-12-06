@@ -1,13 +1,14 @@
 .contact-container {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 80px 10px 10px 10px;
     margin: auto;
 
     .contact-helper {
         text-align: center;
         margin-bottom: 20px;
         width: 100%;
+        color: white;
 
         h1 {
             font-size: 2em;
@@ -16,7 +17,7 @@
 
         p {
             font-size: 1em;
-            color: #666;
+            
         }
     }
 
@@ -37,7 +38,7 @@
 
         .contact-helper {
             flex: 1;
-            text-align: left;
+            // text-align: left;
             padding-right: 20px;
 
             h1 {

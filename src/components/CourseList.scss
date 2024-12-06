@@ -1,7 +1,6 @@
 /* CourseList.css */
 .course-list {
-    padding: 20px;
-    margin: 0px 20px 0px 20px;
+    padding: 50px;
 
     .video-card {
         display: flex;
@@ -10,9 +9,9 @@
         width: 100%;
         max-width: 800px;
         height: 300px; /* Set a good height for the card */
-        background-color: #f9f9f9;
+        background-color: #492084;
         border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin: 20px auto; /* Center the card and add spacing */
         overflow: hidden;
     }
@@ -23,14 +22,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #e0e0e0; /* Placeholder background for empty images */
+        // background-color: #e0e0e0; /* Placeholder background for empty images */
+        padding: 10px;
     }
     
     .video-thumbnail {
         width: 100%; /* Responsive image width */
         height: 100%; /* Responsive image height */
         object-fit: cover; /* Ensures the image maintains its aspect ratio */
-        border-radius: 12px 0 0 12px; /* Matches the card's rounded corners */
+        border-radius: 10px; /* Matches the card's rounded corners */
     }
     
     .video-descp {
@@ -40,24 +40,27 @@
         gap: 10px;
         padding: 20px; /* Adds spacing inside the description area */
         justify-content: center; /* Vertically center content */
-        background-color: #ffffff;
+        // background-color: #ffffff;
+        background-color: #492084;
         border-radius: 0 12px 12px 0; /* Matches the card's rounded corners */
     }
     
-    .video-descp label {
-        font-weight: bold;
-        text-align: center;
-        font-size: 18px; /* Slightly larger for prominence */
-        margin-bottom: 10px;
-        color: #333;
-    }
-    
-    .video-descp p {
-        font-size: 14px;
-        line-height: 1.6;
-        text-align: justify; /* Better readability */
-        color: #555;
-        margin: 0;
+    .video-descp  {
+        label {
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px; /* Slightly larger for prominence */
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify; /* Better readability */
+            color: white;
+            margin: 0;
+        }
     }
     
     .video-card {
