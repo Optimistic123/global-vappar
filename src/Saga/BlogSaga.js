@@ -22,7 +22,8 @@ const fetchBlogsApi = (action) => {
                 const blogDetails = {
                     id: 1,
                     title: 'Blog 1',
-                    content: "<h1>Blog Title</h1><p>This is a blog paragraph.</p><ul><li>Item 1</li><li>Item 2</li></ul>"
+                    content: "<h1>Blog Title</h1><p>This is a blog paragraph.</p><ul><li>Item 1</li><li>Item 2</li></ul>",
+                    thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg'
                 }
                 resolve(blogDetails)
             }, 1000);
@@ -31,8 +32,9 @@ const fetchBlogsApi = (action) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const newList = [
-                    { id: 1, title: 'Blog 1', summary: 'Blog 1 Summary' },
-                    { id: 2, title: 'Blog 2', summary: 'Blog 2 Summary' },
+                    
+                    { id: 1, title: 'Blog 1', summary: 'Blog 1 Summary',  thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg'},
+                    { id: 2, title: 'Blog 2', summary: 'Blog 2 Summary', thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg'},
                 ]
                 resolve(newList)
             }, 1000);

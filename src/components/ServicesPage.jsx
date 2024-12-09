@@ -87,7 +87,7 @@ const ServicesPage = () => {
       modalIsOpen={showModal}
       handleClose={handleClose}
     >
-      <ContactForm />
+        <ContactForm />
     </Modal>}
   </div>)
 };

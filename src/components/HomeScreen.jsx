@@ -226,7 +226,7 @@ const HomeScreen = () => {
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
-        <ContactForm />
+          <ContactForm />
       </Modal>}
     </div>
   );

@@ -21,19 +21,38 @@ const BlogList = () => {
     return (
         <div className="blog-list">
             {isBlogLoading ? (
-                <Shimmer type={"blogShimmer"}/>
+                <Shimmer type={"blogShimmer"} />
             ) : (
-                <div className="blog-grid">
-                    {blogs.length > 0 && blogs?.map((blog) => (
-                        <div key={blog.id} className="blog-card">
-                            <h3>{blog.title}</h3>
-                            <p>{blog.summary}</p>
-                            <Link to={`/blog/${blog.id}`} className="read-more">
-                                Read More
-                            </Link>
-                        </div>
-                    ))}
+                <div>
+                    <div className="blog-header">
+                        <h2>Global Vyapar blog</h2>
+                        <p>Stay ahead with latest Cross-Border insights</p>
+                    </div>
+
+                    <div className="blog-grid">
+                        {blogs.length > 0 && blogs?.map((blog) => (
+                            <div key={blog.id} className="blog-card">
+                                <img src={blog.thumbnail} alt={blog.title} className="blog-thumbnail" />
+                                <h3>{blog.title}</h3>
+                                <p>{blog.summary}</p>
+                                <div className='black-border'></div>
+                                <div className='blog-summary'>
+                                    <div className='blog-meta'>
+                                        <p>Team Global Vyapar</p>
+                                        <ul>
+                                            <li>7 DECEMBER 2024</li>
+                                        </ul>
+                                    </div>
+                                    <Link to={`/blog/${blog.id}`} className="read-more">
+                                        Read More
+                                    </Link>
+                                </div>
+                                
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
             )}
         </div>
     );
