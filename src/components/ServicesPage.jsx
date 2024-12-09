@@ -1,148 +1,95 @@
 // ServicesPage.js
-import React, { useRef } from 'react';
-import ContactForm from './ContactForm'; // Lead Form component
+import React, { useState } from 'react';
+import ContactForm from './ContactForm';
 import './ServicesPage.scss';
+import ServiceSection from './ServiceSection';
+import Modal from "./Modal"
 
 const ServicesPage = () => {
-  const contactFormRef = useRef(null);
-
-  const scrollToElement = () => {
-    contactFormRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
-
-  const videos = [
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => {
+    setShowModal(false);
+  }
+  const services = [
     {
+      image: "https://via.placeholder.com/300",
       title: "Export-Import Business Courses",
-      description:
-        "Learn everything you need to start and grow your export-import business with our comprehensive courses.",
-      videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
+      points: [
+        { label: "Expert-Led Learning", description: "Learn from industry professionals." },
+        { label: "Practical Strategies", description: "Gain actionable skills for business growth." },
+        { label: "Networking & Support", description: "Connect with peers and experts." },
+      ],
+      buttonText: "Get in Touch",
+      onClick: () => setShowModal(true),
     },
     {
-      title: "Export-Import Start-Up Kit (Documents)",
-      description:
-        "Get all the essential documents and templates to kickstart your export-import journey.",
-      videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
-    },
-    {
+      image: "https://via.placeholder.com/300",
       title: "Freight Forwarding",
-      description:
-        "Streamline your shipping process with our reliable freight forwarding solutions.",
-      videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
+      points: [
+        { label: "End-to-End Solutions", description: "Seamless management of your logistics and shipments." },
+        { label: "Global Reach", description: "Expertise in international shipping and customs." },
+        { label: "Reliable Delivery", description: "Timely and safe transportation for your goods." },
+      ],
+      buttonText: "Get in Touch",
+      onClick: () => setShowModal(true),
     },
-    // {
-    //   title: "Customs Clearance",
-    //   description:
-    //     "Hassle-free customs clearance services to ensure smooth international trade operations.",
-    //   videoSrc: "https://www.youtube.com/embed/AgXeukFH6bw?autoplay=0&mute=1&loop=1&playlist=AgXeukFH6bw",
-    // }
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Export-Import start-up kit",
+      points: [
+        { label: "Complete Starter Package", description: "Courses and services tailored for new exporters and importers." },
+        { label: "Step-by-Step Guidance", description: "From learning the basics to handling real-world trade scenarios." },
+        { label: "All-in-One Solution", description: "Equip your business with the right tools, knowledge, and support to succeed." },
+      ],
+      buttonText: "Get in Touch",
+      onClick: () => setShowModal(true),
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Customs Clearance",
+      points: [
+        { label: "Smooth Processing", description: "Efficient customs clearance for seamless trade." },
+        { label: "Expert Support", description: "Navigate regulations with ease." },
+        { label: "Quick Clearance", description: "Ensure timely and compliant shipments." },
+      ],
+      buttonText: "Get in Touch",
+      onClick: () => setShowModal(true),
+    },
+    {
+      image: "https://via.placeholder.com/300",
+      title: "Importer on record",
+      points: [
+        { label: "Official Representation", description: "Act as the registered importer for your goods." },
+        { label: "Compliance Assurance", description: "Ensure adherence to import regulations. " },
+        { label: "Hassle-Free Imports", description: "Manage all documentation and responsibilities seamlessly." },
+      ],
+      buttonText: "Get in Touch",
+      onClick: () => setShowModal(true),
+    },
   ];
 
-  return (
-    <div className="services-page">
-      <section className="intro-lead-container">
-        <div className="intro-section">
-          <section className='description'>
-            <h2 className='header'>At Global Vyapar, we offer:</h2>
-            {/* <p className='content'>A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services A small brief of how GV accelerates the growth with its services</p> */}
-          </section>
-          <section className='highlights'>
-            {/* <h2>Key highlights</h2> */}
-            <ul>
-              <li><strong>Export-Import Training: </strong>Learn the A-Z of international trade</li>
-              <li><strong>Business Consulting: </strong>Tailored strategies to scale your global operations</li>
-              <li><strong>Market Insights: </strong>Stay ahead with the latest trends and analytics.</li>
-              <li><strong>Compliance Support: </strong>Navigate regulations with ease.</li>
-            </ul>
-          </section>
-        </div>
-        <div ref={contactFormRef} className="lead-form">
-          <ContactForm />
-        </div>
-      </section>
-
-      {/* <section className="testimonials-section">
-        <h2>What Our Clients Say</h2>
-        <div className="testimonials">
-          <div className="testimonial-card">
-            <p className="testimonial-text">
-              "Global Vyapar has transformed the way I handle my import-export business. Their courses and support are top-notch!"
-            </p>
-            <div className="client-info">
-              <img
-                src="/assets/client1.jpg"
-                alt="Client 1"
-                className="client-photo"
-              />
-              <div>
-                <h4 className="client-name">John Doe</h4>
-                <p className="client-title">CEO, TradeConnect</p>
-              </div>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="testimonial-text">
-              "The webinars and resources provided by Global Vyapar are invaluable. Highly recommended for aspiring entrepreneurs!"
-            </p>
-            <div className="client-info">
-              <img
-                src="/assets/client2.jpg"
-                alt="Client 2"
-                className="client-photo"
-              />
-              <div>
-                <h4 className="client-name">Jane Smith</h4>
-                <p className="client-title">Founder, ExportEase</p>
-              </div>
-            </div>
-          </div>
-          <div className="testimonial-card">
-            <p className="testimonial-text">
-              "Global Vyapar's startup kit made launching my export business so much easier. Thank you!"
-            </p>
-            <div className="client-info">
-              <img
-                src="/assets/client3.jpg"
-                alt="Client 3"
-                className="client-photo"
-              />
-              <div>
-                <h4 className="client-name">Rajesh Kumar</h4>
-                <p className="client-title">Entrepreneur</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section className="services-section">
-        <h2>Our Services</h2>
-        <div className="service-cards">
-          {videos.map((service, index) => (
-            <div className="service-card" key={index}>
-              <div className='content-wrapper'>
-                <label className="service-title">{service.title}</label>
-                <p className="service-description">{service.description}</p>
-              </div>
-              <div className="service-video-wrapper">
-                <iframe
-                  className="service-video"
-                  src={service.videoSrc}
-                  title={service.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-
-      <div className="cta">
-        <button onClick={scrollToElement}>Get a Quote</button>
-      </div>
+  return (<div className="services-page">
+    <div className='services-page-header'>
+      <h2>Our Services</h2>
+      <p>Export Import Solutions for Every Type, Wanapreneurs, Startup, Mid-size, Large-size.We help people and local businesses go global with and global businesses to expand even more.</p>
     </div>
-  );
+    {services.map((service, index) => (
+      <ServiceSection
+        key={index}
+        image={service.image}
+        title={service.title}
+        points={service.points}
+        buttonText={service.buttonText}
+        onClick={service.onClick}
+      />
+    ))}
+    {showModal && <Modal
+      modalIsOpen={showModal}
+      handleClose={handleClose}
+    >
+      <ContactForm />
+    </Modal>}
+  </div>)
 };
 
 export default ServicesPage;

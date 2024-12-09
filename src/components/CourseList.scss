@@ -1,100 +1,173 @@
 /* CourseList.css */
 .course-list {
-    padding: 50px;
+    margin-top: 90px;
+
+    .course-page-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        h2,
+        p {
+            color: white;
+        }
+    }
+
+    .video-grid {
+        display: flex;
+        overflow-x: scroll;
+        gap: 1em;
+        margin: 0em 2em;
+
+
+        /* Optional styles for scrollbar appearance (for WebKit browsers like Chrome, Edge, and Safari) */
+        scrollbar-width: thin;
+        scrollbar-color: #492084 #f0f0f0;
+
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #492084;
+            border-radius: 4px;
+        }
+    }
 
     .video-card {
         display: flex;
-        flex-direction: row; /* Ensures the image and description are side by side */
+        flex-direction: column;
         gap: 10px;
-        width: 100%;
-        max-width: 800px;
-        height: 300px; /* Set a good height for the card */
-        background-color: #492084;
+        min-width: 400px;
+        background-color: white;
         border-radius: 12px;
-        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 20px auto; /* Center the card and add spacing */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px;
         overflow: hidden;
     }
-    
+
     .video-image {
-        flex: 1; /* Takes up half the card */
-        height: 100%; /* Ensure it fills the card height */
+        flex: 1;
+        /* Takes up half the card */
+        height: 100%;
+        /* Ensure it fills the card height */
         display: flex;
         justify-content: center;
         align-items: center;
-        // background-color: #e0e0e0; /* Placeholder background for empty images */
-        padding: 10px;
+
+        a {
+            width: 100%;
+        }
     }
-    
+
     .video-thumbnail {
-        width: 100%; /* Responsive image width */
-        height: 100%; /* Responsive image height */
-        object-fit: cover; /* Ensures the image maintains its aspect ratio */
-        border-radius: 10px; /* Matches the card's rounded corners */
+        width: 100%;
+        /* Responsive image width */
+        height: 100%;
+        /* Responsive image height */
+        object-fit: cover;
+        /* Ensures the image maintains its aspect ratio */
+        border-radius: 10px;
+        /* Matches the card's rounded corners */
     }
-    
+
     .video-descp {
-        flex: 1; /* Takes up half the card */
+        flex: 1;
+        /* Takes up half the card */
         display: flex;
         flex-direction: column;
         gap: 10px;
-        padding: 20px; /* Adds spacing inside the description area */
-        justify-content: center; /* Vertically center content */
+        padding: 20px;
+        /* Adds spacing inside the description area */
+        justify-content: center;
+        /* Vertically center content */
         // background-color: #ffffff;
-        background-color: #492084;
-        border-radius: 0 12px 12px 0; /* Matches the card's rounded corners */
+        background-color: white;
+        border-radius: 0 12px 12px 0;
+        /* Matches the card's rounded corners */
     }
-    
-    .video-descp  {
+
+    .video-descp {
         label {
             font-weight: bold;
             text-align: center;
-            font-size: 18px; /* Slightly larger for prominence */
+            font-size: 18px;
+            /* Slightly larger for prominence */
             margin-bottom: 10px;
-            color: white;
+            color: black;
         }
-        
+
         p {
             font-size: 14px;
             line-height: 1.6;
-            text-align: justify; /* Better readability */
-            color: white;
+            text-align: justify;
+            /* Better readability */
+            color: black;
             margin: 0;
         }
     }
-    
+
+    .video-info {
+        border-top: 2px solid black;
+        height: 50px;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            height: 100%;
+        }
+
+    }
+
     .video-card {
         &:hover {
             transform: translateY(-5px);
         }
     }
-    
+
     .video-thumbnail {
         width: 100%;
         height: auto;
         object-fit: cover;
     }
-    
+
     .video-title {
         padding: 10px;
         font-size: 1.1em;
         color: #333;
         text-align: center;
-    }    
+    }
 
     @media (max-width: 768px) {
+        .video-grid {
+            flex-direction: column;
+        }
+
         .video-card {
-            flex-direction: column; /* Stack image and description vertically */
-            height: auto; /* Adjust height for smaller screens */
+            min-width: 100%;
+            flex-direction: column;
+            /* Stack image and description vertically */
+            height: auto;
+            /* Adjust height for smaller screens */
+            margin: 0px;
         }
-    
+
         .video-image {
-            height: 200px; /* Set a fixed height for the image on smaller screens */
+            height: 200px;
+            /* Set a fixed height for the image on smaller screens */
         }
-    
+
         .video-descp {
-            padding: 15px; /* Reduce padding on smaller screens */
+            padding: 15px;
+            /* Reduce padding on smaller screens */
         }
     }
 }
-

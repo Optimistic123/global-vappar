@@ -21,17 +21,30 @@ const fetchCoursesApi = (payload) => {
         { id: '1', title: 'Video Title 1', 
           thumbnail: 'https://img.youtube.com/vi/ywI0xPabPr4/hqdefault.jpg', 
           link: 'https://www.youtube.com/watch?v=ywI0xPabPr4',
-          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+          descp: "Video description1: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss",
+          duration: "15 min",
+          price: 200
         },
         { id: '2', title: 'Video Title 2', 
           thumbnail: 'https://img.youtube.com/vi/73fvG0b37xY/hqdefault.jpg', 
           link: 'https://www.youtube.com/watch?v=73fvG0b37xY',
-          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+          descp: "Video description2: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss",
+          duration: "6 min",
+          price: 300
         },
         { id: '3', title: 'Video Title 3', 
           thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', 
           link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw',
-          descp: "Video description: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss" 
+          descp: "Video description3: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss",
+          duration: "90 min",
+          price: 3800
+        },
+        { id: '4', title: 'Video Title 4', 
+          thumbnail: 'https://img.youtube.com/vi/LpmmBRx4OIw/hqdefault.jpg', 
+          link: 'https://www.youtube.com/watch?v=LpmmBRx4OIw',
+          descp: "Video description4: This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss This videoo tells about these thingss",
+          duration: "20 min",
+          price: 2000
         },
         ]
       resolve(newList)

@@ -66,6 +66,34 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <div className="useful-links-social-small-screen">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={40} />
+            </a></li>
+            <li>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <FaTwitter size={40} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={40} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={40} />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@GlobalVyapar" target="_blank" rel="noopener noreferrer">
+                <FaYoutube size={40} />
+              </a>
+            </li>
+          </ul>
+        </div>
         <div class="footer-term-cond">
           <span>&copy; {new Date().getFullYear()} Global Vyapar. All rights reserved.</span>
           <a href="/terms-and-conditions" class="footer-link">Terms & Conditions</a>

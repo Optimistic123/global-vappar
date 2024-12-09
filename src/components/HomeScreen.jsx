@@ -4,6 +4,9 @@ import CircularLogoSlider from "./CircularLogoSlider";
 import { useNavigate } from "react-router-dom";
 import CTAButton from './CTAButton';
 import StarRating from "./StarRating";
+import ContactForm from './ContactForm';
+import Modal from './Modal';
+
 
 const logos = [
   { src: "/assets/logo.png", alt: "Client 1" },
@@ -193,7 +196,7 @@ const HomeScreen = () => {
         <CircularLogoSlider logos={logos} />
       </section>
 
-      <section className="testimonial-section">
+      {/* <section className="testimonial-section">
         <h2>What Our Clients Say</h2>
         <div className="testimonials-container">
           {testimonials.map(({ id, videoSrc, text, clientName, clientTitle }) => (
@@ -217,14 +220,14 @@ const HomeScreen = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
-      {/* {showModal && <Modal
+      {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>} */}
+      </Modal>}
     </div>
   );
 };
