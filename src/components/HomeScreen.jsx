@@ -23,7 +23,7 @@ const HomeScreen = () => {
   useEffect(() => {
     const timeouId = setTimeout(() => {
       setShowModal(true)
-    }, 2000)
+    }, 3000)
 
     return () => {
       clearTimeout(timeouId);
@@ -99,7 +99,28 @@ const HomeScreen = () => {
           <div className='content'>
             <div className='exim-description'>
               <div className='exim-text'>
-                <label>Global Vyapar empowers businesses with the right tools, strategies, and community to thrive in international trade. Join our growing network of successful exporters and importers.</label>
+                <label>Global Vyapar empowers businesses with the knowledge, strategies, and community to thrive in international trade.</label>
+                <div className='subcontent'>
+                    <ul>
+                      <li>
+                        <img
+                          src="/assets/logo.png"
+                          alt="Upskilling"
+                          className="upskilling"
+                        />
+                        <label>Impactful Upskilling</label>
+                      </li>
+                      <li>
+                        <img
+                          src="/assets/logo.png"
+                          alt="Right Growth"
+                          className="growth"
+                        />
+                        <label>Right Growth Partners</label>
+                      </li>
+                    </ul>
+                </div>
+                <p>Join our growing network of successful exporters and importers.</p>
                 <div className='action-button'>
                   {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
                   {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}

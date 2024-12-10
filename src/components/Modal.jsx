@@ -20,7 +20,7 @@ const Modal = (props) => {
             position: "relative",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)", // Centers the modal
+            transform: "translate(-50%, -45%)", // Centers the modal
             padding: "20px",
             borderRadius: "8px",
             maxWidth: "440px",

@@ -19,6 +19,12 @@
   }
 
   .nav-header {
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+    }
+    
     .logo {
       color: white;
     }
@@ -30,6 +36,10 @@
       border: none;
       cursor: pointer;
       color: white;
+    }
+
+    .cta-button {
+      display: none;
     }
   }
 
@@ -43,6 +53,8 @@
       display: flex;
       margin: 0;
       padding: 0;
+      justify-content: center;
+      align-items: center;
 
       @media (min-width: 769px) {
         gap: 100px;
@@ -56,6 +68,10 @@
         }
       }
     }
+
+    .cta-button {
+      height: 5vh;
+    }
   }
 
   /* Styles for Smaller Screens */
@@ -68,6 +84,7 @@
       padding: 10px;
       width: 100%;
       color: white;
+      gap: 12px;
 
       .logo {
         max-width: 100%;
@@ -81,6 +98,12 @@
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
+      }
+
+      .cta-button {
+        height: 35px;
+        display: flex;
+        gap: 5px;
       }
     }
 
@@ -122,12 +145,19 @@
             color: white;
           }
         }
+
+        .page-link {
+          .cta-button {
+            display: none;
+          }
+        }
       }
 
       ul {
         flex-direction: column;
         width: 100%;
         padding: 0;
+        align-items: start;
 
         li {
           padding: 15px 20px;
