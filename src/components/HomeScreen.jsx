@@ -76,18 +76,17 @@ const HomeScreen = () => {
           <div className='text-tile'>
             {/* <Typewriter text={"Grow Your Export-Import Business with Global Vyapar"} /> */}
             <h4 className='t-header'>Go Global with Global Vyapar!</h4>
-            <h4><span className="highlight"> Grow Your Export-Import Business with Global Vyapar.</span></h4>
-            <h4>See why businesses across India trust Global Vyapar to solve their most complex export-import challenges.</h4>
+            <h4><span className="highlight">Grow Your Export-Import Business</span></h4>
           </div>
           <div className='text-main-point'>
             <ul>
-              <li><h4>A trusted partner for export-import businesses.</h4></li>
-              <li><h4>Expert-led learning programs tailored for entrepreneurs.</h4></li>
-              <li><h4>A thriving community of over 2 lakh+ followers on YouTube.</h4></li>
-              <li><h4>Regular webinars and hands-on learning experiences.</h4></li>
+              <li><h4>Trusted partner for export-import businesses</h4></li>
+              <li><h4>Expert-led learning programs</h4></li>
+              <li><h4>2 lakh+ community on YouTube </h4></li>
+              <li><h4>Webinars and hands-on learning</h4></li>
             </ul>
           </div>
-          <CTAButton CTA={"CTA"} />
+          <CTAButton CTA={"Get In Touch"} />
         </div>
       </section>
 

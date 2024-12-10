@@ -19,7 +19,7 @@ const Footer = () => {
             <h4>Company</h4>
             <ul>
               <li><a href="/">Home</a></li>
-              <li><a href="/about-us">About</a></li>
+              <li><a href="/contact">About</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/courses">Courses</a></li>
               <li><a href="/blog">Blog</a></li>
@@ -30,9 +30,9 @@ const Footer = () => {
           <div className="useful-links-docu">
             <h4>Documentation</h4>
             <ul>
-              <li><a href="/about-us">Help Center</a></li>
-              <li><a href="/courses">Contact</a></li>
-              <li><a href="/webinars">FAQ</a></li>
+              <li><a href="/contact">Help Center</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/contact">FAQ</a></li>
               <li><a href="/contact">Privacy Policy</a></li>
             </ul>
           </div>

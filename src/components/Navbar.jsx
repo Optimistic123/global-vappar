@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className={`nav-header`}>
           <Link to="/">
             {/* <img src="/assets/logo.png" alt="Logo" className="logo" /> */}
-            <label className="logo">Global Vvypar</label>
+            <label className="logo">Global Vyapar</label>
           </Link>
           <CTAButton CTA={"Sign up for webinar"} onClick={handelModal}/>
           <button className="hamburger" onClick={toggleMenu}>

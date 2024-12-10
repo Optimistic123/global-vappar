@@ -12,7 +12,7 @@ const ServicesPage = () => {
   }
   const services = [
     {
-      image: "https://via.placeholder.com/300",
+      image: "/assets/pexels-tomfisk-2217513.jpg",
       title: "Export-Import Business Courses",
       points: [
         { label: "Expert-Led Learning", description: "Learn from industry professionals." },
@@ -23,7 +23,7 @@ const ServicesPage = () => {
       onClick: () => setShowModal(true),
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "/assets/import-export.webp",
       title: "Freight Forwarding",
       points: [
         { label: "End-to-End Solutions", description: "Seamless management of your logistics and shipments." },
@@ -34,7 +34,7 @@ const ServicesPage = () => {
       onClick: () => setShowModal(true),
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "/assets/whatsapp-image-2022-12-09-at-4-46-33-pm-500x500.webp",
       title: "Export-Import start-up kit",
       points: [
         { label: "Complete Starter Package", description: "Courses and services tailored for new exporters and importers." },
@@ -45,7 +45,7 @@ const ServicesPage = () => {
       onClick: () => setShowModal(true),
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "/assets/pexels-artempodrez-5025635.jpg",
       title: "Customs Clearance",
       points: [
         { label: "Smooth Processing", description: "Efficient customs clearance for seamless trade." },
@@ -56,7 +56,7 @@ const ServicesPage = () => {
       onClick: () => setShowModal(true),
     },
     {
-      image: "https://via.placeholder.com/300",
+      image: "/assets/ior-learn-page.png",
       title: "Importer on record",
       points: [
         { label: "Official Representation", description: "Act as the registered importer for your goods." },
