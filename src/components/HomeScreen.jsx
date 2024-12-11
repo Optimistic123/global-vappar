@@ -16,6 +16,24 @@ const logos = [
   { src: "/assets/logo.png", alt: "Client 5" },
 ];
 
+const whyUsCards = [
+  {
+    id: '#one',
+    title: 'Reliability',
+    description: 'Proven expertise and dependable solutions for your global trade success.',
+  },
+  {
+    id: '#two',
+    title: 'Transparency',
+    description: 'Clear processes and open communication for a trustworthy partnership.',
+  },
+  {
+    id: '#three',
+    title: 'Simplicity',
+    description: 'Streamlined tools and guidance to make international trade easy and accessible.',
+  },
+];
+
 const HomeScreen = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -100,24 +118,24 @@ const HomeScreen = () => {
               <div className='exim-text'>
                 <label>Global Vyapar empowers businesses with the knowledge, strategies, and community to thrive in international trade.</label>
                 <div className='subcontent'>
-                    <ul>
-                      <li>
-                        <img
-                          src="/assets/logo.png"
-                          alt="Upskilling"
-                          className="upskilling"
-                        />
-                        <label>Impactful Upskilling</label>
-                      </li>
-                      <li>
-                        <img
-                          src="/assets/logo.png"
-                          alt="Right Growth"
-                          className="growth"
-                        />
-                        <label>Right Growth Partners</label>
-                      </li>
-                    </ul>
+                  <ul>
+                    <li>
+                      <img
+                        src="/assets/user.png"
+                        alt="Upskilling"
+                        className="upskilling"
+                      />
+                      <label>Impactful Upskilling</label>
+                    </li>
+                    <li>
+                      <img
+                        src="/assets/twin.png"
+                        alt="Right Growth"
+                        className="growth"
+                      />
+                      <label>Right Growth Partners</label>
+                    </li>
+                  </ul>
                 </div>
                 <p>Join our growing network of successful exporters and importers.</p>
                 <div className='action-button'>
@@ -211,6 +229,22 @@ const HomeScreen = () => {
         </div>
       </section>
 
+      <div className="why-us-section">
+        <h2>Why Choose Global Vyapar?</h2>
+        <div className="card-container">
+          {whyUsCards.map((card, index) => (
+            <div key={index} className="card">
+              <span className="card-id">{card.id}</span>
+              <div className='card-info'>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+              
+            </div>
+          ))}
+        </div>
+      </div>
+
       <section className='org-clinets'>
         <h2>Our partners and client</h2>
         <CircularLogoSlider logos={logos} />
@@ -246,7 +280,7 @@ const HomeScreen = () => {
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
-          <ContactForm />
+        <ContactForm />
       </Modal>}
     </div>
   );
