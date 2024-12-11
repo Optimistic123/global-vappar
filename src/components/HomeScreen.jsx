@@ -48,7 +48,7 @@ const HomeScreen = () => {
     }
   }, [])
 
-  const handldeWebinarSingUp = () => {
+  const handldeLearMore = () => {
     setShowModal(true);
   }
 
@@ -139,8 +139,6 @@ const HomeScreen = () => {
                 </div>
                 <p>Join our growing network of successful exporters and importers.</p>
                 <div className='action-button'>
-                  {/* <button onClick={handldeWebinarSingUp}>SignUp for Webinar</button> */}
-                  {/* <button onClick={handldeExploreCourse}>Explore courses</button> */}
                   <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} />
                 </div>
               </div>
@@ -239,10 +237,10 @@ const HomeScreen = () => {
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
               </div>
-              
             </div>
           ))}
         </div>
+        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} />
       </div>
 
       <section className='org-clinets'>
