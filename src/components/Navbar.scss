@@ -183,5 +183,15 @@
     .smaller-screen-nav-header {
       display: none;
     }
+
+    .cta-text {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 395px) {
+    .cta-text {
+      font-size: 12px;
+    }
   }
 }
