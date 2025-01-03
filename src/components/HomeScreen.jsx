@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HomeScreen.scss';
-import CircularLogoSlider from "./CircularLogoSlider";
+// import CircularLogoSlider from "./CircularLogoSlider";
 import { useNavigate } from "react-router-dom";
 import CTAButton from './CTAButton';
 import StarRating from "./StarRating";
@@ -8,13 +8,13 @@ import ContactForm from './ContactForm';
 import Modal from './Modal';
 
 
-const logos = [
-  { src: "/assets/logo.png", alt: "Client 1" },
-  { src: "/assets/logo.png", alt: "Client 2" },
-  { src: "/assets/logo.png", alt: "Client 3" },
-  { src: "/assets/logo.png", alt: "Client 4" },
-  { src: "/assets/logo.png", alt: "Client 5" },
-];
+// const logos = [
+//   { src: "/assets/logo.png", alt: "Client 1" },
+//   { src: "/assets/logo.png", alt: "Client 2" },
+//   { src: "/assets/logo.png", alt: "Client 3" },
+//   { src: "/assets/logo.png", alt: "Client 4" },
+//   { src: "/assets/logo.png", alt: "Client 5" },
+// ];
 
 const whyUsCards = [
   {
@@ -87,7 +87,7 @@ const HomeScreen = () => {
           muted
           playsInline
         >
-          <source src="/assets/theme-video.mp4" type="video/mp4" />
+          <source src="/assets/Cover-video.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="text-content">
@@ -104,7 +104,7 @@ const HomeScreen = () => {
               <li><h4>Webinars and hands-on learning</h4></li>
             </ul>
           </div>
-          <CTAButton CTA={"Get In Touch"} />
+          <CTAButton CTA={"Get In Touch"} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
         </div>
       </section>
 
@@ -139,7 +139,7 @@ const HomeScreen = () => {
                 </div>
                 <p>Join our growing network of successful exporters and importers.</p>
                 <div className='action-button'>
-                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} />
+                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ const HomeScreen = () => {
       </section>
 
       <section className="testimonials-section">
-        <h2>What Our Clients Say</h2>
+        <h2>Hear it from our clients!</h2>
         <div className="testimonials">
           <div className="testimonial-card">
             <h4>Awesome tool! </h4>
@@ -240,13 +240,13 @@ const HomeScreen = () => {
             </div>
           ))}
         </div>
-        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} />
+        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
       </div>
 
-      <section className='org-clinets'>
+      {/* <section className='org-clinets'>
         <h2>Our partners and client</h2>
         <CircularLogoSlider logos={logos} />
-      </section>
+      </section> */}
 
       {/* <section className="testimonial-section">
         <h2>What Our Clients Say</h2>

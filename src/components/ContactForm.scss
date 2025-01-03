@@ -5,7 +5,7 @@
         margin: 2rem auto;
         padding: 1rem;
         border-radius: 10px;
-        color: white;
+        // color: white;
 
         .contact-form {
             display: flex;
@@ -27,6 +27,7 @@
                     padding: 0.8rem;
                     border: none;
                     border-radius: 5px;
+                    background-color: orange;
                     // font-size: 1rem;
                 }
 
@@ -53,7 +54,7 @@
 
             button {
                 padding: 0.8rem;
-                background: #fdd835;
+                background: orange;
                 color: #492084;
                 border: none;
                 border-radius: 5px;

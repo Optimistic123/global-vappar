@@ -8,11 +8,6 @@
         justify-content: center;
         align-items: center;
         gap: 1em;
-
-        h2,
-        p {
-            color: white;
-        }
     }
 
     .video-grid {
@@ -24,7 +19,7 @@
 
         /* Optional styles for scrollbar appearance (for WebKit browsers like Chrome, Edge, and Safari) */
         scrollbar-width: thin;
-        scrollbar-color: #492084 #f0f0f0;
+        scrollbar-color: orange #f0f0f0;
 
         &::-webkit-scrollbar {
             height: 8px;
@@ -35,7 +30,6 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: #492084;
             border-radius: 4px;
         }
     }
@@ -47,7 +41,11 @@
         min-width: 400px;
         background-color: white;
         border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Bottom shadow */
+                0 -4px 6px rgba(0, 0, 0, 0.05), /* Top shadow */
+                -4px 0 6px rgba(0, 0, 0, 0.05), /* Left shadow */
+                4px 0 6px rgba(0, 0, 0, 0.05); /* Right shadow */
+
         margin: 20px;
         overflow: hidden;
     }
@@ -147,6 +145,11 @@
     }
 
     @media (max-width: 768px) {
+        .course-page-header {
+            p {
+                margin-bottom: 15px;
+            }
+        }
         .video-grid {
             flex-direction: column;
         }

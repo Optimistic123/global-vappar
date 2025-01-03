@@ -1,7 +1,7 @@
 .service-section {
     display: flex;
-    background: linear-gradient(to bottom right, #040430, #492084);
-    color: white;
+    // background: linear-gradient(to bottom right, #040430, #492084);
+    // color: white;
     border-radius: 8px;
     padding: 1rem;
     gap: 1rem;
@@ -41,7 +41,7 @@
 
 .service-section__content button {
     padding: 0.8rem 1.5rem;
-    background-color: #ffcd00;
+    background-color: orange;
     color: #2c1d5b;
     border: none;
     border-radius: 5px;
@@ -51,7 +51,7 @@
 }
 
 .service-section__content button:hover {
-    background-color: #d9b200;
+    background-color: rgb(255, 191, 72);
 }
 
 /* Responsive Design */

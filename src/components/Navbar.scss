@@ -4,29 +4,30 @@
   z-index: 1000;
   width: 100%;
   nav {
-    background-color: #040430;
+    // background-color: white;
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 100%;
 
     display: flex;
     align-items: center;
     gap: 20px;
-    height: 8vh
+    height: 60px
   }
 
   .nav-header {
     a {
       text-decoration: none;
       font-weight: bold;
-      color: white;
+      color: black;
+      // color: white;
     }
     
     .logo {
-      color: white;
+      // color: white;
     }
 
     .hamburger {
@@ -35,7 +36,7 @@
       background: none;
       border: none;
       cursor: pointer;
-      color: white;
+      // color: white;
     }
 
     .cta-button {
@@ -64,7 +65,8 @@
         a {
           text-decoration: none;
           font-weight: bold;
-          color: white;
+          color: black;
+          // color: white;
         }
       }
     }
@@ -85,7 +87,7 @@
       justify-content: space-between;
       padding: 10px;
       width: 100%;
-      color: white;
+      // color: white;
       gap: 12px;
 
       .logo {
@@ -113,7 +115,7 @@
 
     .nav-menu {
       position: fixed;
-      top: -45px;
+      top: -63px;
       left: 0;
       height: 110vh;
       width: 250px;
@@ -122,7 +124,7 @@
       padding-top: 60px;
       transform: translateX(-100%);
       z-index: 1001;
-      background-color: darkblue;
+      background-color: white;
 
       &.open {
         transform: translateX(0);
@@ -133,7 +135,7 @@
           align-items: center;
           padding: 10px 20px;
           width: 100%;
-          color: white;
+          // color: white;
     
           label {
             font-size: 1.2em;
@@ -145,7 +147,7 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: white;
+            // color: white;
           }
         }
 

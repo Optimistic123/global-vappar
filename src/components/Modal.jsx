@@ -27,7 +27,7 @@ const Modal = (props) => {
             minHeight: "600px",
             width: "90%", // Makes it responsive for smaller screens
             boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            backgroundColor: "#040430"
+            backgroundColor: "white"
           },
         }}
       >
