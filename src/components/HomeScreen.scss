@@ -17,6 +17,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            opacity: 0.7;
         }
 
         .text-content {
@@ -31,12 +32,16 @@
                 text-align: left;
 
                 .t-header {
-                    display: inline-block;
-                    // background-color: #040430;
+                    width: 90%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #040430;
                     padding: 0.5rem 1rem;
                     color: white;
                     border-radius: 20px;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    font-size: xx-large;
+                    font-weight: 700;
                 }
             }
 
@@ -68,17 +73,12 @@
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
             }
 
-            .text-main-point {
-                display: flex;
-                align-items: left;
-            }
-
             ul {
-                color: white;
+                // color: white;
                 margin-left: 14px;
 
                 li>h4 {
-                    color: white;
+                    // color: white;
                     font-size: 1rem;
                     margin-bottom: 0.5rem;
                     font-weight: 800;
@@ -142,14 +142,11 @@
                     align-items: center;
 
                     .exim-text {
-                        // width: 70%;
-                        // color: white;
                         display: flex;
                         flex-direction: column;
                         gap: 2rem;
 
                         .action-button {
-                            // margin-left: 30px;
                             width: 300px;
 
                             button {
@@ -169,28 +166,24 @@
                             }
                         }
 
-                        .subcontent {
+                        .knowledge-points {
                             padding: 0rem 2rem;
 
                             ul {
-                                list-style: none;
                                 display: flex;
+                                flex-direction: column;
                                 justify-content: space-between;
-                                align-items: center;
+                                align-items: flex-start;
                             }
 
                             li {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
                                 gap: 1rem;
-
-                                img {
-                                    width: 60px;
-                                    height: 60px;
-                                }
                             }
+                        }
+
+                        p {
+                            display: flex;
+                            align-items: flex-start;
                         }
                     }
                 }
@@ -313,7 +306,7 @@
 
                     .exim-description {
                         .exim-text {
-                            .subcontent {
+                            .knowledge-points {
                                 padding: 0rem 1rem;
                             }
                         }
@@ -350,7 +343,7 @@
             gap: 2rem;
 
             .testimonial-card {
-                background: #f05121;
+                background: #f05629;
                 border-radius: 10px;
                 // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 padding: 2rem;
@@ -421,7 +414,7 @@
         }
 
         .card {
-            background: #f05121;
+            background: #f05629;
             border-radius: 10px;
             // box-shadow: 0 4px 8px rgba(251, 108, 30, 0.1);
             max-width: 400px;
@@ -441,7 +434,7 @@
             .card-id {
                 display: inline-block;
                 padding: 0.3rem 1rem;
-                background-color: orange;
+                background-color: #f89726;
                 border-radius: 12px;
                 color: black;
                 font-size: 0.9rem;
@@ -476,9 +469,172 @@
                 max-width: 300px;
             }
         }
-        
+
     }
 
+    .global-vypar-benefits {
+        text-align: center;
+        padding: 3rem 1.5rem;
+        // color: #ffffff;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            background: #f05629;
+            border-radius: 10px;
+            // box-shadow: 0 4px 8px rgba(251, 108, 30, 0.1);
+            max-width: 400px;
+            text-align: left;
+            flex: 1 1 calc(33.333% - 2rem);
+            min-width: 280px;
+            height: 300px;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-info {
+                padding: 0rem 2rem;
+            }
+
+            .card-id {
+                display: inline-block;
+                padding: 0.3rem 1rem;
+                // background-color: #f89726;
+                border-radius: 12px;
+                color: black;
+                font-size: 0.9rem;
+                font-weight: bold;
+                margin: 1rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: #ffffff;
+                display: flex;
+                // justify-content: center;
+                // align-items: center;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #ffffff;
+            }
+        }
+
+        .cta-button {
+            margin: 2rem 2rem 0rem 4rem;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .cta-button {
+                margin: 2rem 2rem 0rem 2rem;
+                max-width: 300px;
+            }
+        }
+
+    }
+
+    .home-our-services {
+        text-align: center;
+        padding: 3rem 1.5rem;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-container {
+            background: #f05629;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            border-radius: 10px;
+            max-width: 400px;
+            text-align: left;
+            flex: 1 1 calc(33.333% - 2rem);
+            min-width: 280px;
+            height: 300px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-info {
+                padding: 0rem 2rem;
+                h3 {
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .card-id {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.3rem 1rem;
+                border-radius: 12px;
+                color: black;
+                font-size: 0.9rem;
+                font-weight: bold;
+                margin: 1rem;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: #ffffff;
+                display: flex;
+                // justify-content: center;
+                // align-items: center;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+                color: #ffffff;
+            }
+        }
+
+        .cta-button {
+            margin: 2rem 2rem 0rem 4rem;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .home-our-services {
+                padding: 3rem 2rem;;
+            }
+            .cta-button {
+                margin: 2rem 2rem 0rem 2rem;
+                max-width: 300px;
+            }
+        }
+
+    }
 
     .org-clinets {
         display: flex;

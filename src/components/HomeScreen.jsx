@@ -1,37 +1,109 @@
 import React, { useState, useEffect } from 'react';
 import './HomeScreen.scss';
-// import CircularLogoSlider from "./CircularLogoSlider";
+import CircularLogoSlider from "./CircularLogoSlider";
 import { useNavigate } from "react-router-dom";
 import CTAButton from './CTAButton';
 import StarRating from "./StarRating";
 import ContactForm from './ContactForm';
 import Modal from './Modal';
+// import { FaQuoteLeft } from 'react-icons/fa';
+import { BiSolidQuoteAltLeft } from "react-icons/bi";
+import { FcBusinessman } from "react-icons/fc";
+import { TbGlobeFilled } from "react-icons/tb";
+import { MdManageAccounts } from "react-icons/md";
+import { RiContactsBookLine } from "react-icons/ri";
+import { BsBagCheck } from "react-icons/bs";
 
-
-// const logos = [
-//   { src: "/assets/logo.png", alt: "Client 1" },
-//   { src: "/assets/logo.png", alt: "Client 2" },
-//   { src: "/assets/logo.png", alt: "Client 3" },
-//   { src: "/assets/logo.png", alt: "Client 4" },
-//   { src: "/assets/logo.png", alt: "Client 5" },
-// ];
+const logos = [
+  { src: "/assets/logo.png", alt: "Client 1" },
+  { src: "/assets/logo.png", alt: "Client 2" },
+  { src: "/assets/logo.png", alt: "Client 3" },
+  { src: "/assets/logo.png", alt: "Client 4" },
+  { src: "/assets/logo.png", alt: "Client 5" },
+];
 
 const whyUsCards = [
   {
     id: '#one',
-    title: 'Reliability',
-    description: 'Proven expertise and dependable solutions for your global trade success.',
+    title: 'End-to-End Services',
+    description: 'Expert support in market research, logistics, and regulatory compliance.',
   },
   {
     id: '#two',
-    title: 'Transparency',
-    description: 'Clear processes and open communication for a trustworthy partnership.',
+    title: 'Expert Programs',
+    description: 'Learn import export strategies through webinars, workshops, and hands-on courses.',
   },
   {
     id: '#three',
-    title: 'Simplicity',
-    description: 'Streamlined tools and guidance to make international trade easy and accessible.',
+    title: 'Global Network',
+    description: 'Connect with 2+ lakh like- minded import-export professionals.',
   },
+];
+
+const benefits = [
+  {
+    id: '#one',
+    title: 'Worldwide business reach',
+    description: 'Become a successful global brand real fast. Grow your customer base with our widespread courier network spanning 220 countries & territories.',
+  },
+  {
+    id: '#two',
+    title: 'Shipment security cover',
+    description: 'Safeguard your shipments against in-transit risks. Claim upto INR 5000* in an unlikely event of damage or loss on the way.',
+  },
+  {
+    id: '#three',
+    title: 'Dedicated account manager',
+    description: 'Leave your worries and concerns to our experienced cross-border experts. Get prioritised support & quick resolution.',
+  },
+  {
+    id: '#four',
+    title: 'Hassle-free customs clearance',
+    description: 'With transparent billing & tax compliance, we ensure you always export your shipments effortlessly. Zero paperwork hassles.',
+  },
+  {
+    id: '#five',
+    title: 'Speedy international delivery',
+    description: 'Your orders are processed through automated workflows, helping you deliver your international orders more efficiently.',
+  },
+  {
+    id: '#six',
+    title: 'Real-time updates',
+    description: 'Get closer to your customers wherever they are. Keep them informed and assured at every step through Email & WhatsApp.',
+  },
+];
+
+const services = [
+  {
+    id: '#one',
+    icon: <FcBusinessman color="#f89726" size="3em" />,
+    title: 'Importer on record',
+    description: 'Import made easy! We handle compliance, documentation, and responsibilities as your registered importer, ensuring a seamless experience.',
+  },
+  {
+    id: '#two',
+    icon: <TbGlobeFilled color="#f89726" size="3em" />,
+    title: 'Freight Forwarding',
+    description: 'Ship globally, stress-free! We manage logistics, customs, and delivery to ensure your goods arrive safely and on time.',
+  },
+  {
+    id: '#three',
+    icon: <MdManageAccounts color="#f89726" size="3em" />,
+    title: 'Customs Clearance',
+    description: 'Clear customs with confidence! Our expert support ensures efficient, timely, and fully compliant shipments, making trade smooth and hassle-free.',
+  },
+  {
+    id: '#four',
+    icon: <RiContactsBookLine color="#f89726" size="3em" />,
+    title: 'Export-Import business courses',
+    description: 'Learn from the best! Gain actionable skills, expert-led insights, and build connections with peers and professionals to drive your business growth.',
+  },
+  {
+    id: '#five',
+    icon: <BsBagCheck color="#f89726" size="3em" />,
+    title: 'Export-Import start-up kit',
+    description: 'Kickstart your trade journey! Our complete starter package offers tailored courses, step-by-step guidance, and all-in-one solutions to equip new exporters and importers with the tools, knowledge, and support needed to succeed.',
+  }
 ];
 
 const HomeScreen = () => {
@@ -93,18 +165,10 @@ const HomeScreen = () => {
         <div className="text-content">
           <div className='text-tile'>
             {/* <Typewriter text={"Grow Your Export-Import Business with Global Vyapar"} /> */}
-            <h4 className='t-header'>Go Global with Global Vyapar!</h4>
-            <h4><span className="highlight">Grow Your Export-Import Business</span></h4>
+            <h4 className='t-header'>Your Export-Import business starts here</h4>
+            <h4><span>We help domestic business go global with our streamlined import export services</span></h4>
           </div>
-          <div className='text-main-point'>
-            <ul>
-              <li><h4>Trusted partner for export-import businesses</h4></li>
-              <li><h4>Expert-led learning programs</h4></li>
-              <li><h4>2 lakh+ community on YouTube </h4></li>
-              <li><h4>Webinars and hands-on learning</h4></li>
-            </ul>
-          </div>
-          <CTAButton CTA={"Get In Touch"} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
+          <CTAButton CTA={"Get In Touch"} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
         </div>
       </section>
 
@@ -117,29 +181,18 @@ const HomeScreen = () => {
             <div className='exim-description'>
               <div className='exim-text'>
                 <label>Global Vyapar empowers businesses with the knowledge, strategies, and community to thrive in international trade.</label>
-                <div className='subcontent'>
+                <div className='knowledge-points'>
                   <ul>
-                    <li>
-                      <img
-                        src="/assets/user.png"
-                        alt="Upskilling"
-                        className="upskilling"
-                      />
-                      <label>Impactful Upskilling</label>
-                    </li>
-                    <li>
-                      <img
-                        src="/assets/twin.png"
-                        alt="Right Growth"
-                        className="growth"
-                      />
-                      <label>Right Growth Partners</label>
-                    </li>
+                    <li>Trusted partner for export-import businesses</li>
+                    <li>Expert-led learning programs</li>
+                    <li>2 lakh+ community on YouTube</li>
+                    <li>Webinars and hands-on learning</li>
                   </ul>
                 </div>
+
                 <p>Join our growing network of successful exporters and importers.</p>
                 <div className='action-button'>
-                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
+                  <CTAButton CTA={"Explore courses"} onClick={handldeExploreCourse} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
                 </div>
               </div>
             </div>
@@ -165,6 +218,22 @@ const HomeScreen = () => {
 
           </div>
         </div>
+      </section>
+
+      <section className="why-us-section">
+        <h2>Why Choose Global Vyapar?</h2>
+        <div className="card-container">
+          {whyUsCards.map((card, index) => (
+            <div key={index} className="card">
+              <span className="card-id">{card.id}</span>
+              <div className='card-info'>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
       </section>
 
       <section className="testimonials-section">
@@ -227,12 +296,12 @@ const HomeScreen = () => {
         </div>
       </section>
 
-      <div className="why-us-section">
-        <h2>Why Choose Global Vyapar?</h2>
+      <section className="global-vypar-benefits">
+        <h2>Benefits of using global Vyapar!</h2>
         <div className="card-container">
-          {whyUsCards.map((card, index) => (
+          {benefits.map((card, index) => (
             <div key={index} className="card">
-              <span className="card-id">{card.id}</span>
+              <span className="card-id"><BiSolidQuoteAltLeft color="#f89726" size="3em" /></span>
               <div className='card-info'>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
@@ -240,13 +309,33 @@ const HomeScreen = () => {
             </div>
           ))}
         </div>
-        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"orange"} IconBackgroundColor={"white"} IconColor={"orange"} />
-      </div>
+        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+      </section>
 
-      {/* <section className='org-clinets'>
+      <section className="home-our-services">
+        <h2>OUR SERVICES</h2>
+        <div className="card-container">
+          {services.map((card, index) => (
+            <div key={index} className="card">
+              {/* <span className="card-id">{card.icon}</span> */}
+              <div className='card-info'>
+                <h3>
+                  <span>{card.icon}</span>
+                  <span>{card.title}</span>
+                </h3>
+
+                <p>{card.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </section>
+
+      <section className='org-clinets'>
         <h2>Our partners and client</h2>
         <CircularLogoSlider logos={logos} />
-      </section> */}
+      </section>
 
       {/* <section className="testimonial-section">
         <h2>What Our Clients Say</h2>
@@ -274,12 +363,12 @@ const HomeScreen = () => {
         </div>
       </section> */}
 
-      {showModal && <Modal
+      {/* {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>}
+      </Modal>} */}
     </div>
   );
 };
