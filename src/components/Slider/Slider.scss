@@ -1,0 +1,76 @@
+.slider-container {
+    // background: #f05629;
+    width: 100%;
+    margin: auto;
+
+    .slide-item {
+        background: #f05629;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 300px;
+        /* Fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Ensures space is distributed evenly */
+
+        .slide-icon {
+            margin-bottom: 10px;
+        }
+
+        .slide-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .slide-subtitle {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .slide-description {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: white;
+            flex-grow: 1;
+            /* Makes the description take up remaining space */
+        }
+
+        .slide-btn {
+            background: #f8951c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            /* Default to full width */
+            max-width: 200px;
+            /* Maximum width of the button */
+            align-self: center;
+            /* Centers the button within the slide item */
+
+            &:hover {
+                transform: scale(1.05);
+                /* Slight zoom on hover */
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            }
+        }
+    }
+
+    /* Media query for larger screens */
+    @media (min-width: 1024px) {
+        .slide-btn {
+            width: 60%;
+            /* Button takes up 60% of the card width on larger screens */
+        }
+    }
+}

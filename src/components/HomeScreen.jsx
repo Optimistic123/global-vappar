@@ -6,6 +6,8 @@ import CTAButton from './CTAButton';
 import StarRating from "./StarRating";
 import ContactForm from './ContactForm';
 import Modal from './Modal';
+import Slider from './Slider'
+
 // import { FaQuoteLeft } from 'react-icons/fa';
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { FcBusinessman } from "react-icons/fc";
@@ -13,6 +15,7 @@ import { TbGlobeFilled } from "react-icons/tb";
 import { MdManageAccounts } from "react-icons/md";
 import { RiContactsBookLine } from "react-icons/ri";
 import { BsBagCheck } from "react-icons/bs";
+import { FaBook, FaSuitcase } from "react-icons/fa";
 
 const logos = [
   { src: "/assets/logo.png", alt: "Client 1" },
@@ -106,6 +109,36 @@ const services = [
   }
 ];
 
+const slides = [
+  {
+    icon: <FaBook color="#f89726" size="3em" />,
+    title: "Export-Import business courses",
+    subtitle: "Learn from the best!",
+    description:
+      "Gain actionable skills, expert-led insights, and build connections with peers and professionals to drive your business growth.",
+  },
+  {
+    icon: <FaSuitcase color="#f89726" size="3em" />,
+    title: "Export-Import start-up kit",
+    subtitle: "Kickstart your trade journey!",
+    description:
+      "Our complete starter package offers tailored courses, step-by-step guidance, and all-in-one solutions to equip new exporters and importers with the tools, knowledge, and support needed to succeed.",
+  },
+  {
+    icon: <FaBook color="#f89726" size="3em" />,
+    title: "Advanced Logistics",
+    subtitle: "Master logistics management!",
+    description:
+      "Learn the skills to manage global trade logistics, reduce costs, and improve efficiency in supply chain operations.",
+  },
+  {
+    icon: <FaSuitcase color="#f89726" size="3em" />,
+    title: "Customs Documentation",
+    subtitle: "Stay compliant!",
+    description:
+      "Understand the necessary documentation and procedures required for smooth and compliant trade operations.",
+  }
+];
 const HomeScreen = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
@@ -312,12 +345,11 @@ const HomeScreen = () => {
         <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
       </section>
 
-      <section className="home-our-services">
+      {/* <section className="home-our-services">
         <h2>OUR SERVICES</h2>
         <div className="card-container">
           {services.map((card, index) => (
             <div key={index} className="card">
-              {/* <span className="card-id">{card.icon}</span> */}
               <div className='card-info'>
                 <h3>
                   <span>{card.icon}</span>
@@ -329,7 +361,11 @@ const HomeScreen = () => {
             </div>
           ))}
         </div>
+      </section> */}
 
+      <section className="home-our-services">
+        <h2>OUR SERVICES</h2>
+        <Slider slides={slides} />
       </section>
 
       <section className='org-clinets'>
@@ -363,12 +399,12 @@ const HomeScreen = () => {
         </div>
       </section> */}
 
-      {/* {showModal && <Modal
+      {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>} */}
+      </Modal>}
     </div>
   );
 };
