@@ -11,6 +11,7 @@ import OrgHighlights from "./HomeScreen/OrgHighlights";
 import WhyUs from "./HomeScreen/WhyUs";
 import Testimonials from "./HomeScreen/Testimonials";
 import GVbenefits from "./HomeScreen/GVbenefits";
+import FAQ from "./FAQ/FAQ";
 import { FaBook, FaSuitcase } from "react-icons/fa";
 
 const logos = [
@@ -92,6 +93,11 @@ const HomeScreen = () => {
         <h2>Our partners and client</h2>
         <CircularLogoSlider logos={logos} />
       </section>
+
+      <section className='org-faq'>
+        <FAQ />
+      </section>
+     
 
       {/* {showModal && <Modal
         modalIsOpen={showModal}

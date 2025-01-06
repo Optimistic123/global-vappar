@@ -707,6 +707,14 @@
         }
     }
 
+    .org-faq {
+        padding: 2rem 4rem;
+        min-height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     /* Responsive Styling */
     @media (max-width: 768px) {
         .org-description {
@@ -715,6 +723,10 @@
                 margin-left: 1px;
                 margin-bottom: 41vh;
             }
+        }
+
+        .org-faq {
+            padding: 2rem;
         }
     }
 }

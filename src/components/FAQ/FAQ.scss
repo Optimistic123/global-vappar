@@ -1,0 +1,113 @@
+/* FAQ Container */
+.faq-container {
+    width: 100%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 30px;
+
+    .faq-header {
+        width: 50%;
+        text-align: left;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            align-items: flex-start;
+
+        }
+
+        .cta-button {
+            width: 300px;
+        }
+    }
+
+    .faq-list {
+        width: 50%;
+        margin-top: 20px;
+
+        .faq-item {
+            background-color: #f8951c;
+            color: white;
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background-color: #f05629;
+            }
+
+            .faq-question {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.1rem;
+                font-weight: bold;
+
+                .faq-icon {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+
+                .faq-answer {
+                    margin-top: 10px;
+                    font-size: 0.9rem;
+                    font-style: italic;
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+
+        .faq-header,
+        .faq-list {
+            width: 100%;
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .faq-container {
+            width: 95%;
+        }
+
+        .faq-header h1 {
+            font-size: 1.5rem;
+        }
+
+        .faq-header p {
+            font-size: 0.9rem;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            font-size: 0.85rem;
+        }
+
+        .contact-button {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+    }
+}
