@@ -4,13 +4,18 @@ import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import './Slider.scss';
+import "swiper/swiper-bundle.css";
+
 
 const Slider = ({ slides }) => {
     return (
         <div className="slider-container">
             <Swiper
                 modules={[Navigation, Pagination, A11y]}
-                spaceBetween={30}
+                pagination={{
+                    clickable: true,
+                }}
+                spaceBetween={10}
                 slidesPerView={1}
                 navigation
                 breakpoints={{

@@ -1,42 +1,55 @@
-.slider-container {
-    // background: #f05629;
-    width: 100%;
+.slider-container2 {
+    width: 90%;
     margin: auto;
 
-    .swiper {
-        .swiper-pagination {
-          bottom: -15px; // Adjust dot position
+    .slick-slider {
+        .slick-list {
+            margin: 0 -10px; // Negative margin to balance slide spacing
         }
-    
-        .swiper-button-prev,
-        .swiper-button-next {
-          z-index: 2;
-          width: 30px;
-          height: 30px;
-          background: #ff5722; // Custom arrow color
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: background 0.3s;
-    
-          &:hover {
-            background: #e64a19; // Hover effect for arrows
-          }
+
+        .slick-prev,
+        .slick-next {
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+            background: #ff5722; // Custom arrow color
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #e64a19; // Hover effect for arrows
+            }
         }
-    
-        .swiper-button-prev {
-          left: -40px; // Position left arrow
+
+        .slick-prev {
+            left: -50px; // Position left arrow
         }
-    
-        .swiper-button-next {
-          right: -40px; // Position right arrow
+
+        .slick-next {
+            right: -50px; // Position right arrow
         }
-      }
+
+        @media (max-width: 600px) {
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .slick-slide {
+                padding: 0 10px; // Add padding between slides
+            }
+        }
+
+        
+    }
 
     .slide-item {
         background: #f05629;
-        margin: 10px;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
