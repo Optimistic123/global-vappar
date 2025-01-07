@@ -32,8 +32,10 @@ const FAQ = () => {
   return (
     <div className="faq-container">
       <div className="faq-header">
-        <h1>Frequently Asked Questions</h1>
-        <div>
+        <div className="header-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div className="faq-subtitle">
             <p>Got more questions?</p>
             <p>Feel free to drop them on our email!</p>
         </div>

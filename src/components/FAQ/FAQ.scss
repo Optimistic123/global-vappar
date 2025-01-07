@@ -2,11 +2,13 @@
 .faq-container {
     width: 90%;
     margin: auto;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    // gap: 30px;
+    min-height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0 10px;
 
     .faq-header {
         width: 50%;
@@ -16,16 +18,19 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 20px;
 
-        h1 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+        .header-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        p {
-            font-size: 1rem;
-            color: #555;
-            align-items: flex-start;
+        .faq-subtitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
         }
 
@@ -76,38 +81,53 @@
 
     @media (max-width: 768px) {
         flex-direction: column;
+        width: 96%;
+        padding: 20px;
 
         .faq-header,
         .faq-list {
             width: 100%;
         }
+
+        .faq-header {
+            .header-title {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    font-size: 25px;
+                }
+            }
+        }
     }
 
     /* Responsive Design */
-    @media (max-width: 768px) {
-        .faq-container {
-            width: 95%;
-        }
+    // @media (max-width: 768px) {
+    //     .faq-container {
+    //         width: 96%;
+    //     }
 
-        .faq-header h1 {
-            font-size: 1.5rem;
-        }
+    //     .faq-header h1 {
+    //         font-size: 1.5rem;
+    //     }
 
-        .faq-header p {
-            font-size: 0.9rem;
-        }
+    //     .faq-header p {
+    //         font-size: 0.9rem;
+    //     }
 
-        .faq-question {
-            font-size: 1rem;
-        }
+    //     .faq-question {
+    //         font-size: 1rem;
+    //     }
 
-        .faq-answer {
-            font-size: 0.85rem;
-        }
+    //     .faq-answer {
+    //         font-size: 0.85rem;
+    //     }
 
-        .contact-button {
-            padding: 8px 16px;
-            font-size: 0.9rem;
-        }
-    }
+    //     .contact-button {
+    //         padding: 8px 16px;
+    //         font-size: 0.9rem;
+    //     }
+    // }
 }

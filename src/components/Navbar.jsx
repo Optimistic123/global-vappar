@@ -39,7 +39,8 @@ const Navbar = () => {
             {/* <img src="/assets/logo.png" alt="Logo" className="logo" /> */}
             <label className="logo">Global Vyapar</label>
           </Link>
-          <CTAButton CTA={"Sign up for webinar"} onClick={handelModal}/>
+          <CTAButton CTA={"Sign up for webinar"} onClick={handelModal} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+
           <button className="hamburger" onClick={toggleMenu}>
             ☰
           </button>
@@ -57,7 +58,7 @@ const Navbar = () => {
               {/* <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li> */}
               <li><Link to="/blog" onClick={collpaseMenu}>Blogs</Link></li>
               <li><Link to="/contact" onClick={collpaseMenu}>Contact Us</Link></li>
-              <CTAButton CTA={"Sign up for webinar"} onClick={handelModal}/>
+              <CTAButton CTA={"Sign up for webinar"} onClick={handelModal} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
             </ul>
           </div>
         </div>

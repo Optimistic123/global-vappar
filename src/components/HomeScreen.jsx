@@ -99,12 +99,12 @@ const HomeScreen = () => {
       </section>
      
 
-      {/* {showModal && <Modal
+      {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>} */}
+      </Modal>}
     </div>
   );
 };

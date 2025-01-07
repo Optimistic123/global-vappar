@@ -4,8 +4,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 2rem;
         height: calc(100vh - 60px);
+        margin-bottom: 50px;
         position: relative;
         overflow: hidden;
         margin-top: 60px;
@@ -97,10 +97,9 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
-        padding: 2rem;
         width: 100%;
-        min-height: 92vh;
+        min-height: 600px;
+        margin-bottom: 50px;
 
         .org-highlights-card {
             display: flex;
@@ -142,8 +141,10 @@
                     align-items: center;
 
                     .exim-text {
+                        align-items: center;
                         display: flex;
                         flex-direction: column;
+                        justify-content: center;
                         gap: 2rem;
 
                         .action-button {
@@ -253,7 +254,7 @@
 
         /* Tablet Screens */
         @media (max-width: 1024px) {
-            padding: 1.5rem;
+            // padding: 1.5rem;
 
             .org-highlights-card {
                 width: 95%;
@@ -272,7 +273,7 @@
 
         /* Mobile Screens */
         @media (max-width: 768px) {
-            padding: 1.5rem;
+            // padding: 1.5rem;
 
             .org-highlights-card {
                 .content {
@@ -293,7 +294,7 @@
 
         /* Small Mobile Screens */
         @media (max-width: 480px) {
-            padding: 1rem;
+            // padding: 1rem;
 
             .org-highlights-card {
                 .header {
@@ -326,14 +327,13 @@
     }
 
     .testimonials-section {
-        padding: 3rem 1.5rem;
-        // background-color: #f9f9f9;
+        // padding: 3rem 1.5rem;
+        margin-bottom: 50px;
         text-align: center;
 
         h2 {
             font-size: 2rem;
-            // color: white;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
 
         .testimonials {
@@ -398,12 +398,11 @@
 
     .why-us-section {
         text-align: center;
-        padding: 3rem 1.5rem;
-        // color: #ffffff;
-
+        // padding: 3rem 1.5rem;
+        margin-bottom: 50px;
         h2 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
 
         .card-container {
@@ -459,7 +458,7 @@
         }
 
         .cta-button {
-            margin: 2rem 2rem 0rem 4rem;
+            margin: 2rem 2rem 0rem 5rem;
             max-width: 300px;
         }
 
@@ -474,12 +473,13 @@
 
     .global-vypar-benefits {
         text-align: center;
-        padding: 3rem 1.5rem;
+        // padding: 3rem 1.5rem;
         // color: #ffffff;
+        margin-bottom: 50px;
 
         h2 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
         }
 
         .card-container {
@@ -535,7 +535,7 @@
         }
 
         .cta-button {
-            margin: 2rem 2rem 0rem 4rem;
+            margin: 2rem 2rem 0rem 5rem;
             max-width: 300px;
         }
 
@@ -550,16 +550,17 @@
 
     .home-our-services {
         text-align: center;
-        padding: 0rem 1rem;
+        // padding: 0rem 1rem;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
 
         h2 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
             color: black;
         }
 
@@ -570,18 +571,18 @@
         // }
     }
 
-
     .org-clinets {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
-        padding: 2rem;
+        // gap: 1.5rem;
+        // padding: 1rem;
+        margin-bottom: 50px;
 
         h2 {
             font-size: 2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
             color: black;
         }
 
@@ -592,9 +593,10 @@
     }
 
     .testimonial-section {
-        padding: 2rem;
+        // padding: 2rem;
         text-align: center;
         min-height: 92vh;
+        margin-bottom: 50px;
 
         h2 {
             font-size: 2rem;
@@ -708,11 +710,12 @@
     }
 
     .org-faq {
-        padding: 2rem 4rem;
-        min-height: 75vh;
+        // padding: 2rem 4rem;
+        min-height: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 50px;
     }
 
     /* Responsive Styling */
@@ -721,12 +724,69 @@
             .text-content {
                 width: 100%;
                 margin-left: 1px;
-                margin-bottom: 41vh;
+                margin-bottom: 35vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text-content {
+                .text-tile {
+                    margin-bottom: 40px;
+
+                    .t-header {
+                        width: 100%;
+                        background-color: #040430;
+                        padding: 0.5rem 1rem;
+                        font-size: larger;
+                        line-height: 3;
+                    }
+
+                    .t-subtitle {
+                        padding: 0 28px;
+                    }
+                }
             }
         }
 
+        .org-description,
+        .org-highlights,
+        .testimonials-section,
+        .why-us-section,
+        .global-vypar-benefits,
+        .home-our-services,
+        .org-clinets,
         .org-faq {
-            padding: 2rem;
+            padding: 0rem;
+            margin-bottom: 50px;
         }
+
+        .why-us-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .card-container {
+                gap: 1rem;
+            }
+        }
+
+        .global-vypar-benefits {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .testimonials-section{
+            .testimonials {
+                gap: 1rem;
+            }
+        }
+        .global-vypar-benefits {
+            .card-container {
+                gap: 1rem;
+            }
+        }
+
     }
 }
