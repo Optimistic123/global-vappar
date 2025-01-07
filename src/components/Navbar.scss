@@ -61,11 +61,15 @@
           font-weight: bold;
           color: black;
         }
+
+        .active-link {
+          color: #f89726;
+          font-weight: bold;
+        }
       }
     }
 
     .cta-button {
-      height: 5vh;
       padding: 9px 11px;
       gap: 7px;
     }
@@ -147,6 +151,11 @@
         .page-link {
           .cta-button {
             display: none;
+          }
+
+          .active-link {
+            color: #f89726;
+            font-weight: bold;
           }
         }
       }

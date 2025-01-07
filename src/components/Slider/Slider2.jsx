@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Slider2.scss';
 
-
 function Responsive({ slides }) {
   // Slider settings
   const settings = {
@@ -52,7 +51,7 @@ function Responsive({ slides }) {
               <h3 className="slide-title">{title}</h3>
               <p className="slide-subtitle">{subtitle}</p>
               <p className="slide-description">{description}</p>
-              <button className="slide-btn">Learn More</button>
+              <button className="slide-btn" onClick={slide.onClick}>Learn More</button>
             </div>
           );
         })}

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../HomeScreen.scss';
-import CTAButton from '../CTAButton';
+import CTAButton from '../CTAButton/CTAButton';
+
 
 const OrgDescription = () => {
     return (

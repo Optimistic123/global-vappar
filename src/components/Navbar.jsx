@@ -1,10 +1,11 @@
 // Navbar.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMenu } from '../store/aapSlice';
 import './Navbar.scss';
-import CTAButton from './CTAButton';
+import CTAButton from './CTAButton/CTAButton';
+
 import Modal from './Modal';
 import ContactForm from './ContactForm';
 
@@ -35,10 +36,10 @@ const Navbar = () => {
     <div className='nav-container'>
       <nav>
         <div className={`nav-header`}>
-          <Link to="/">
+          <NavLink to="/">
             {/* <img src="/assets/logo.png" alt="Logo" className="logo" /> */}
             <label className="logo">Global Vyapar</label>
-          </Link>
+          </NavLink>
           <CTAButton CTA={"Sign up for webinar"} onClick={handelModal} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
 
           <button className="hamburger" onClick={toggleMenu}>
@@ -53,11 +54,11 @@ const Navbar = () => {
           </div>
           <div className='page-link'>
             <ul>
-              <li><Link to="/courses" onClick={collpaseMenu}>Courses</Link></li>
-              <li><Link to="/services" onClick={collpaseMenu}>Our Service</Link></li>
+              <li><NavLink to="/courses" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Courses</NavLink></li>
+              <li><NavLink to="/services" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Service</NavLink></li>
               {/* <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li> */}
-              <li><Link to="/blog" onClick={collpaseMenu}>Blogs</Link></li>
-              <li><Link to="/contact" onClick={collpaseMenu}>Contact Us</Link></li>
+              <li><NavLink to="/blog" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Blogs</NavLink></li>
+              <li><NavLink to="/contact" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Contact</NavLink></li>
               <CTAButton CTA={"Sign up for webinar"} onClick={handelModal} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
             </ul>
           </div>

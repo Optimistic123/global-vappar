@@ -1,7 +1,7 @@
 import React from 'react'
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import '../HomeScreen.scss';
-import CTAButton from '../CTAButton';
+import CTAButton from '../CTAButton/CTAButton';
 
 
 const benefits = [

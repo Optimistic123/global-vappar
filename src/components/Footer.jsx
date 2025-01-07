@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 import './Footer.scss';
-import CTAButton from './CTAButton';
+import CTAButton from './CTAButton/CTAButton';
 
 const Footer = () => {
   return (

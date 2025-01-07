@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./FAQ.scss"; // Include the corresponding CSS for styling
-import CTAButton from '../CTAButton';
+import CTAButton from '../CTAButton/CTAButton';
 import { FcBusinesswoman } from "react-icons/fc";
 
-const FAQ = () => {
+const FAQ = ({handldeLearMore}) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
@@ -40,7 +40,7 @@ const FAQ = () => {
             <p>Feel free to drop them on our email!</p>
         </div>
         <FcBusinesswoman color="#f89726" size="9em" />
-        <CTAButton CTA={"Contact us"} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+        <CTAButton CTA={"Contact us"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
       </div>
 
       <div className="faq-list">
