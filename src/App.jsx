@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
@@ -8,9 +8,6 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import BlogDetail from './components/BlogDetails';
 import BlogList from './components/BlogList';
-// import Profile from './pages/Profile';
-// import Login from './pages/Login';
-// import ProtectedRoute from './components/ProtectedRoute';
 import Layout from './components/Layout';
 import { useSelector } from 'react-redux';
 
@@ -18,7 +15,6 @@ import "./App.css"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
-  const [isAuth, setIsAuth] = useState(false);
   const isMenuOpen = useSelector((state) => state.app.isMenuOpen);
 
   return (
@@ -46,4 +42,3 @@ const App = () => {
 
 export default App;
 
-// test comment
