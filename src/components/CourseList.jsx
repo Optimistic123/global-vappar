@@ -48,7 +48,6 @@ const CourseList = () => {
                                     </ul>
                                 </div>
                             </div>
-
                         ))}
                     </div>
                 </div>

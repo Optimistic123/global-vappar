@@ -7,8 +7,10 @@ const ContactUs = () => {
   return (
     <div className='contact-container'>
       <section className='contact-helper'>
-        <h2>At Global Vyapar</h2>
-        <h3>We Offer</h3>
+        <div className='contact-header'>
+          <h2>At Global Vyapar</h2>
+          <h3>We Offer</h3>
+        </div>
         <ul>
           <li>
             <strong>Export-Import Training:</strong> Learn the A-Z of international trade.

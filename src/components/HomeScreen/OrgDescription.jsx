@@ -3,7 +3,7 @@ import '../HomeScreen.scss';
 import CTAButton from '../CTAButton/CTAButton';
 
 
-const OrgDescription = () => {
+const OrgDescription = ({handldeLearMore}) => {
     return (
         <section className="org-description">
             <video
@@ -22,7 +22,7 @@ const OrgDescription = () => {
                     <h4 className='t-header'>Your Export-Import business starts here</h4>
                     <h4 className='t-subtitle'><span>We help domestic business go global with our streamlined import export services</span></h4>
                 </div>
-                <CTAButton CTA={"Get In Touch"} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+                <CTAButton CTA={"Get In Touch"} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} onClick={handldeLearMore}/>
             </div>
         </section>
     )

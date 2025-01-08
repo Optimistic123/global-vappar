@@ -93,7 +93,6 @@
     .org-highlights {
         display: flex;
         flex-direction: column;
-        text-align: center;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -296,10 +295,10 @@
             // padding: 1rem;
 
             .org-highlights-card {
-                .header {
-                    font-size: 1rem;
-                    padding: 0.5rem;
-                }
+                // .header {
+                //     font-size: 1rem;
+                //     padding: 0.5rem;
+                // }
 
                 .content {
                     flex-direction: column;
@@ -315,6 +314,12 @@
                     .exim-description,
                     .org-youtube-highlight {
                         width: 100%;
+                    }
+                }
+
+                .knowledge-points {
+                    ul {
+                        padding: 0 25px;
                     }
                 }
             }
@@ -399,6 +404,7 @@
         text-align: center;
         // padding: 3rem 1.5rem;
         margin-bottom: 50px;
+
         h2 {
             font-size: 2rem;
             margin-bottom: 20px;
@@ -731,14 +737,16 @@
 
             .text-content {
                 .text-tile {
-                    margin-bottom: 40px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
                     .t-header {
                         width: 100%;
                         background-color: #040430;
-                        padding: 0.5rem 1rem;
-                        font-size: larger;
-                        line-height: 3;
+                        padding: 0.5rem 2rem;
                     }
 
                     .t-subtitle {
@@ -765,6 +773,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             .card-container {
                 gap: 1rem;
             }
@@ -776,11 +785,13 @@
             align-items: center;
             justify-content: center;
         }
-        .testimonials-section{
+
+        .testimonials-section {
             .testimonials {
                 gap: 1rem;
             }
         }
+
         .global-vypar-benefits {
             .card-container {
                 gap: 1rem;

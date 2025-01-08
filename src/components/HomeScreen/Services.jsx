@@ -6,7 +6,7 @@ import { FaBook, FaSuitcase } from "react-icons/fa";
 const Services = ({ handldeLearMore }) => {
     const slides = [
         {
-            icon: <FaBook color="#f89726" size="3em" />,
+            icon: <FaBook color="#000000" size="3em" />,
             title: "Export-Import business courses",
             subtitle: "Learn from the best!",
             description:
@@ -14,7 +14,7 @@ const Services = ({ handldeLearMore }) => {
             onClick: handldeLearMore
         },
         {
-            icon: <FaSuitcase color="#f89726" size="3em" />,
+            icon: <FaSuitcase color="#000000" size="3em" />,
             title: "Export-Import start-up kit",
             subtitle: "Kickstart your trade journey!",
             description:
@@ -22,7 +22,7 @@ const Services = ({ handldeLearMore }) => {
             onClick: handldeLearMore
         },
         {
-            icon: <FaBook color="#f89726" size="3em" />,
+            icon: <FaBook color="#000000" size="3em" />,
             title: "Advanced Logistics",
             subtitle: "Master logistics management!",
             description:
@@ -30,7 +30,7 @@ const Services = ({ handldeLearMore }) => {
             onClick: handldeLearMore
         },
         {
-            icon: <FaSuitcase color="#f89726" size="3em" />,
+            icon: <FaSuitcase color="#000000" size="3em" />,
             title: "Customs Documentation",
             subtitle: "Stay compliant!",
             description:

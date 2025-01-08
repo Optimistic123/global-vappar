@@ -1,6 +1,5 @@
 .services-page {
-    margin-top: 90px;
-
+    margin: 20px 0;
     .services-page-header {
         display: flex;
         flex-direction: column;
@@ -8,9 +7,5 @@
         align-items: center;
         gap: 1em;
         padding: 0px 20px;
-
-        h2, p {
-            // color: white;
-        }
     }
 }

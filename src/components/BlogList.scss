@@ -1,7 +1,6 @@
 /* BlogList.css */
 .blog-list {
-    margin-top: 90px;
-    // background-color: #040430;
+    margin: 20px 0;
 
     .blog-header {
         display: flex;
@@ -9,11 +8,6 @@
         justify-content: center;
         gap: 1rem;
         align-items: center;
-
-        h2,
-        p {
-            // color: white;
-        }
 
         margin-bottom: 20px;
     }

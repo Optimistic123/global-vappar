@@ -49,7 +49,7 @@ const HomeScreen = () => {
 
   return (
     <div className="home-screen">
-      <OrgDescription />
+      <OrgDescription handldeLearMore={handldeLearMore}/>
       <OrgHighlights handldeExploreCourse={handldeExploreCourse}/>
       <WhyUs handldeLearMore={handldeLearMore}/>
       <Testimonials />
@@ -65,12 +65,12 @@ const HomeScreen = () => {
       </section>
      
 
-      {/* {showModal && <Modal
+      {showModal && <Modal
         modalIsOpen={showModal}
         handleClose={handleClose}
       >
         <ContactForm />
-      </Modal>} */}
+      </Modal>}
     </div>
   );
 };
