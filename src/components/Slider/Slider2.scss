@@ -33,6 +33,7 @@
         }
 
         @media (max-width: 600px) {
+
             .slick-prev,
             .slick-next {
                 display: none !important;
@@ -45,7 +46,7 @@
             }
         }
 
-        
+
     }
 
     .slide-item {
@@ -63,6 +64,19 @@
 
         .slide-icon {
             margin-bottom: 10px;
+        }
+
+        .slide-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100px; // Set desired width
+                height: 100px; // Set desired height
+                object-fit: contain; // En
+            }
+
         }
 
         .slide-title {

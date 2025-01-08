@@ -48,6 +48,9 @@ function Responsive({ slides }) {
           return (
             <div className="slide-item" key={index}>
               <div className="slide-icon">{icon}</div>
+              {/* <div className="slide-img">
+                <img src={icon} alt={title} />
+              </div> */}
               <h3 className="slide-title">{title}</h3>
               <p className="slide-subtitle">{subtitle}</p>
               <p className="slide-description">{description}</p>
