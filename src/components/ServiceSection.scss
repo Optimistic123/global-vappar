@@ -15,8 +15,9 @@
 
 .service-section__image img {
     width: 100%;
-    max-width: 400px;
     border-radius: 8px;
+    height: 300px;
+    width: 400px;
 }
 
 .service-section__content {
@@ -63,6 +64,23 @@
     .service-section__image,
     .service-section__content {
         flex: 1 1 100%;
+    }
+
+    .service-section__image {
+        img {
+            height: 200px;
+            width: 300px;
+        }
+    }
+    .service-section__content {
+        h2 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
     }
 }
 

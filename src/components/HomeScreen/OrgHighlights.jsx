@@ -7,7 +7,7 @@ const OrgHighlights = ({handldeExploreCourse}) => {
     <section className='org-highlights'>
         <div className='org-highlights-card'>
           <div className='header'>
-            <label>Knowledge to Fuel Your EXIM Business Growth</label>
+            <label>Knowledge to fuel your exim business growth</label>
           </div>
           <div className='content'>
             <div className='exim-description'>

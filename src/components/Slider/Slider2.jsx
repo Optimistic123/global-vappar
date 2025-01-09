@@ -44,13 +44,12 @@ function Responsive({ slides }) {
     <div className="slider-container2">
       <Slider {...settings}>
         {slides.map((slide, index) => {
-          const { icon, title, subtitle, description } = slide; // Destructure slide properties
+          const { icon, title, subtitle, description, image } = slide; // Destructure slide properties
           return (
             <div className="slide-item" key={index}>
-              <div className="slide-icon">{icon}</div>
-              {/* <div className="slide-img">
-                <img src={icon} alt={title} />
-              </div> */}
+              {image ? <div className="slide-img">
+                <img src={image} alt={title} />
+              </div> : <div className="slide-icon">{icon}</div>}
               <h3 className="slide-title">{title}</h3>
               <p className="slide-subtitle">{subtitle}</p>
               <p className="slide-description">{description}</p>
