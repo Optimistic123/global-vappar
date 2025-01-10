@@ -463,15 +463,43 @@
             }
         }
 
-        .cta-button {
-            margin: 2rem 2rem 0rem 5rem;
-            max-width: 300px;
+        @media (min-width: 1024px) {
+            .cta-button-container {
+                display: flex;
+                justify-content: flex-start; /* Align button with the first card */
+                width: 100%;
+                margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
+                margin-top: 20px;
+            }
+
+            .cta-button {
+                max-width: 300px; /* Optional: Limit button width */
+            }
         }
+        
+
+        // @media (max-width: 1024px) {
+        //     .cta-button-container {
+        //         display: flex;
+        //         justify-content: center; /* Center button on smaller screens */
+        //         margin-left: 0; /* Remove left margin */
+        //     }
+    
+        //     .cta-button {
+        //         margin-top: 20px;
+        //         width: 100%;
+        //         min-width: 300px;
+        //     }
+        // }
+
 
         @media (max-width: 768px) {
+            .cta-button-container {
+                margin-top: 10px;
+            }
+
             .cta-button {
-                margin: 2rem 2rem 0rem 2rem;
-                max-width: 300px;
+                min-width: 300px;
             }
         }
 
@@ -540,15 +568,29 @@
             }
         }
 
-        .cta-button {
-            margin: 2rem 2rem 0rem 5rem;
-            max-width: 300px;
+        @media (min-width: 1024px) {
+            .cta-button-container {
+                display: flex;
+                justify-content: flex-start; /* Align button with the first card */
+                width: 100%;
+                margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
+                margin-top: 20px;
+            }
+
+            .cta-button {
+                max-width: 300px; /* Optional: Limit button width */
+            }
         }
+
+        // .cta-button {
+        //     margin: 2rem 2rem 0rem 5rem;
+        //     max-width: 300px;
+        // }
 
         @media (max-width: 768px) {
             .cta-button {
-                margin: 2rem 2rem 0rem 2rem;
-                max-width: 300px;
+                margin-top: 30px; 
+                min-width: 300px;
             }
         }
 

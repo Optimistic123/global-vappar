@@ -48,7 +48,9 @@ const GVbenefits = ({ handldeLearMore }) => {
     <section className="global-vypar-benefits">
       <h2>Benefits of using global Vyapar!</h2>
       <Slider3 slides={benefits} />
-      <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+      <div className='cta-button-container'>
+        <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+      </div>
     </section>
   )
 }

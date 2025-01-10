@@ -20,7 +20,7 @@ const whyUsCards = [
     },
 ];
 
-const WhyUs = ({handldeLearMore}) => {
+const WhyUs = ({ handldeLearMore }) => {
     return (
         <section className="why-us-section">
             <h2>Why Choose Global Vyapar?</h2>
@@ -35,7 +35,9 @@ const WhyUs = ({handldeLearMore}) => {
                     </div>
                 ))}
             </div>
-            <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+            <div className='cta-button-container'>
+                <CTAButton CTA={"Learn more"} onClick={handldeLearMore} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
+            </div>
         </section>
     )
 }
