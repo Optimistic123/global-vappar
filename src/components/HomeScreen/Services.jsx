@@ -1,10 +1,11 @@
 import React from 'react';
 import Slider2 from "../Slider/Slider2"
 import "../HomeScreen.scss";
-import { FaBook, FaSuitcase } from "react-icons/fa";
+import { FaSuitcase } from "react-icons/fa";
 import { FcCustomerSupport } from "react-icons/fc";
-import { PiTruckTrailerFill } from "react-icons/pi";
+import { PiTruckTrailerFill, PiAirplaneInFlightFill } from "react-icons/pi";
 import { FaAddressBook } from "react-icons/fa6";
+
 
 const Services = ({ handldeLearMore }) => {
     const slides = [
@@ -16,7 +17,7 @@ const Services = ({ handldeLearMore }) => {
             onClick: handldeLearMore
         },
         {
-            icon: <PiTruckTrailerFill color="#000000" size="4em" />,
+            icon: <PiAirplaneInFlightFill color="#000000" size="4em" />,
             title: "Freight Forwarding",
             subtitle: "Ship globally, stress-free!",
             description: "We manage logistics, customs, and delivery to ensure your goods arrive safely and on time.",

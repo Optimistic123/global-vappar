@@ -464,11 +464,18 @@
         }
 
         @media (min-width: 1024px) {
+            // .cta-button-container {
+            //     display: flex;
+            //     justify-content: flex-start; /* Align button with the first card */
+            //     width: 100%;
+            //     margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
+            //     margin-top: 20px;
+            // }
+
             .cta-button-container {
-                display: flex;
-                justify-content: flex-start; /* Align button with the first card */
                 width: 100%;
-                margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
+                display: flex;
+                justify-content: center; 
                 margin-top: 20px;
             }
 
@@ -569,12 +576,19 @@
         }
 
         @media (min-width: 1024px) {
+            // .cta-button-container {
+            //     display: flex;
+            //     justify-content: flex-start; /* Align button with the first card */
+            //     width: 100%;
+            //     margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
+            //     margin-top: 20px;
+            // }
+
             .cta-button-container {
-                display: flex;
-                justify-content: flex-start; /* Align button with the first card */
                 width: 100%;
-                margin-left: calc(33.333% - 22rem); /* Align button dynamically under the first card */
-                margin-top: 20px;
+                display: flex;
+                justify-content: center; /* Align button with the first card */
+                margin-top: 40px;
             }
 
             .cta-button {

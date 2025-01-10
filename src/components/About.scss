@@ -52,15 +52,14 @@
                 }
             }
 
-            .image-container {
+            .video-container {
                 width: 50%;
                 position: relative;
                 display: flex;
                 justify-content: center;
 
-                .founder-image {
-                    width: 100%;
-                    max-width: 300px;
+                .founder-video {
+                    width: 90%;
                     border-radius: 15px;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 }
@@ -109,12 +108,8 @@
                 }
             }
 
-            .image-container {
+            .video-container {
                 width: 100%;
-
-                .founder-image {
-                    max-width: 250px;
-                }
 
                 .founder-badge {
                     bottom: -10px;
@@ -138,7 +133,7 @@
                 flex-direction: column;
 
                 .text-content-header,
-                .image-container {
+                .video-container {
                     width: 100%;
                 }
 
@@ -149,11 +144,7 @@
                     }
                 }
 
-                .image-container {
-                    .founder-image {
-                        max-width: 200px;
-                    }
-
+                .video-container {
                     .founder-badge {
                         bottom: -8px;
                         font-size: 11px;

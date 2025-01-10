@@ -29,25 +29,22 @@ const About = () => {
                             </p>
                         </div>
 
-                        <div className="image-container">
-                            <img
-                                src="https://via.placeholder.com/300" // Replace with actual image URL
-                                alt="Dipankar Biswas"
-                                className="founder-image"
-                            />
+                        <div className="video-container">
+                            <video
+                                className="founder-video"
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                            >
+                                <source src="/assets/Cover-video.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
                             <div className="founder-badge">
                                 <span>Founder</span>
                                 <span>Global Vyapar</span>
                             </div>
                         </div>
-                    </div>
-                    <div className="text-content-subtitle">
-                        <p>
-                            Expand your business beyond borders with comprehensive solutions
-                            in trade, logistics, customs, and compliance. At Global Vyapar,
-                            we are your trusted partner in the export-import industry,
-                            dedicated to driving your global growth and success.
-                        </p>
                     </div>
                 </div>
             </div>
