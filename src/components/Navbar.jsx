@@ -59,6 +59,7 @@ const Navbar = () => {
               {/* <li><Link to="/whyus" onClick={collpaseMenu}>Why Us</Link></li> */}
               <li><NavLink to="/blog" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Blogs</NavLink></li>
               <li><NavLink to="/contact" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>Contact</NavLink></li>
+              <li><NavLink to="/about" onClick={collpaseMenu} className={({ isActive }) => (isActive ? "active-link" : "")}>About</NavLink></li>
               <CTAButton CTA={"Sign up for webinar"} onClick={handelModal} backgroundColor={"#f89726"} IconBackgroundColor={"white"} IconColor={"#f89726"} />
             </ul>
           </div>

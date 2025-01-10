@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Courses from './pages/Courses';
 import Services from './pages/Services';
-import Whyus from './pages/Whyus';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
+import About from './components/About'
 import BlogDetail from './components/BlogDetails';
 import BlogList from './components/BlogList';
 import Layout from './components/Layout';
@@ -32,6 +32,7 @@ const App = () => {
                 <Route path=":id" element={<BlogDetail />} />
               </Route>
               <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
             </Routes>
           </div>
         </Layout>
